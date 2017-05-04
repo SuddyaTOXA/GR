@@ -1401,6 +1401,7 @@ a.banner-link {
       .section-class .tab-name-list > li:first-child {
         margin-top: 10px; }
       .section-class .tab-name-list > li:hover {
+        color: #FFFFFF;
         background-color: rgba(251, 126, 34, 0.8); }
       .section-class .tab-name-list > li.active {
         background-color: #FB7E22; }

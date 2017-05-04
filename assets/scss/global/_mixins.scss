@@ -1,0 +1,663 @@
+//
+// SASS Mixins
+// --------------------------------------------------
+@mixin bg($bg_position: center, $bg_size: cover, $bg_repeat: no-repeat) {
+	background: {
+		position: $bg_position;
+		size: $bg_size;
+		repeat: $bg_repeat;
+	}
+}
+@mixin vertical-align-absolute($top: 50%) {
+	position: absolute;
+	top: $top;
+	-webkit-transform: translateY(-50%);
+	-ms-transform: translateY(-50%);
+	transform: translateY(-50%);
+	z-index: 61;
+}
+@mixin horizontal-align-absolute($left: 50%) {
+	position: absolute !important;
+	left: $left !important;
+	-webkit-transform: translateX(-50%) !important;
+	-ms-transform: translateX(-50%) !important;
+	transform: translatex(-50%) !important;
+}
+
+@mixin animate($duration: 0.3s) {
+	-webkit-transition: all $duration ease;
+	-moz-transition: all $duration ease;
+	-o-transition: all $duration ease;
+	transition: all $duration ease;
+}
+
+@mixin height-and-opacity($duration: 0.4s){
+	-webkit-transition: height $duration ease-in-out, opacity $duration ease-in-out, visibility $duration ease-in-out !important;
+	-moz-transition: height $duration ease-in-out, opacity $duration ease-in-out, visibility $duration ease-in-out !important;
+	-o-transition: height $duration ease-in-out, opacity $duration ease-in-out, visibility $duration ease-in-out !important;
+	-ms-transition: height $duration ease-in-out, opacity $duration ease-in-out, visibility $duration ease-in-out !important;;
+	transition: height $duration ease-in-out, opacity $duration ease-in-out, visibility $duration ease-in-out !important;
+}
+@mixin max-height-animate($duration: 0.3s){
+	-webkit-transition: max-height $duration ease-in-out;
+	-moz-transition: max-height $duration ease-in-out;
+	-o-transition: max-height $duration ease-in-out;
+	-ms-transition: max-height $duration ease-in-out;
+	transition: max-height $duration ease-in-out;
+}
+@mixin min-height-animate($duration: 0.5s){
+	-webkit-transition: min-height $duration ease-in-out;
+	-moz-transition: min-height $duration ease-in-out;
+	-o-transition: min-height $duration ease-in-out;
+	-ms-transition: min-height $duration ease-in-out;
+	transition: min-height $duration ease-in-out;
+}
+
+@mixin animate-opacity ($duration-in: 0.6s, $duration-out:0.25s) {
+	-webkit-transition: opacity $duration-in linear $duration-out;
+	-moz-transition: opacity $duration-in linear $duration-out;
+	-o-transition: opacity $duration-in linear $duration-out;
+	-ms-transition: opacity $duration-in linear $duration-out;
+	transition: opacity $duration-in linear $duration-out;
+}
+@mixin nav-overlay-animation($duration: 0.6s) {
+	-webkit-transition: visibility $duration 0ms, opacity $duration linear;
+	-moz-transition: visibility $duration 0ms, opacity $duration linear;
+	-o-transition: visibility $duration 0ms, opacity $duration linear;
+	-ms-transition: visibility $duration 0ms, opacity $duration linear;
+	transition: visibility $duration 0ms, opacity $duration linear;
+}
+@mixin box-shadow-mixin($px: 3px, $color: $bg-color-4)
+{
+	-moz-box-shadow: 0 0 $px $bg-color-4;
+	-webkit-box-shadow: 0 0 $px $bg-color-4;
+	box-shadow: 0 0 $px $bg-color-4;
+}
+@mixin gallery-gradient($start_dir, $end_dir, $color1, $color2) {
+	background-image: -webkit-gradient(
+		linear,
+		$start_dir,
+		$end_dir,
+		color-stop(0, $color1),
+		color-stop(1, $color2)
+	);
+	background-image: -o-linear-gradient($end_dir, $color1 0%, $color2 100%);
+	background-image: -moz-linear-gradient($end_dir, $color1 0%, $color2 100%);
+	background-image: -webkit-linear-gradient($end_dir, $color1 0%, $color2 100%);
+	background-image: -ms-linear-gradient($end_dir, $color1 0%, $color2 100%);
+	background-image: linear-gradient(to $end_dir, $color1 0%, $color2 100%);
+}
+@mixin user-select-none(){
+	-webkit-user-select: none;
+	-moz-user-select: none;
+	-ms-user-select: none;
+}
+@mixin rotation($deg: 45deg) {
+	webkit-transform: rotate($deg);
+	-moz-transform: rotate($deg);
+	-o-transform: rotate($deg);
+	transform: rotate($deg);
+}
+@mixin column-reverse-mobile(){
+	@media (max-width:$screen-xs-max) {
+		display: -webkit-flex;
+		display: flex;
+		-webkit-flex-direction: column-reverse;
+		flex-direction: column-reverse;
+	}
+}
+
+@mixin column-reverse-tablet(){
+	@media (min-width:$screen-sm-min) and (max-width: $screen-sm-max){
+		display: -webkit-flex;
+		display: flex;
+		-webkit-flex-direction: column-reverse;
+		flex-direction: column-reverse;
+	}
+}
+
+@mixin a($top:22px, $borderColor:rgba(54,135,131,0.0), $borderColorOver:rgba(54,135,131,0.5)){
+
+	a {
+		//@include a-inner($top, $borderColor, $borderColorOver);
+	}
+}
+
+@mixin a-14pt(){
+	@include a(20px);
+}
+
+@mixin a-14ptCaps(){
+	@include a(18px);
+}
+
+@mixin a-16pt(){
+	@include a(22px);
+}
+
+/* -------------------------------------------------------------
+  Sass CSS3 Mixins! The Cross-Browser CSS3 Sass Library
+  By: Matthieu Aussaguel, http://www.mynameismatthieu.com, @matthieu_tweets
+  List of CSS3 Sass Mixins File to be @imported and @included as you need
+  The purpose of this library is to facilitate the use of CSS3 on different browsers avoiding HARD TO READ and NEVER
+  ENDING css files
+  note: All CSS3 Properties are being supported by Safari 5
+  more info: http://www.findmebyip.com/litmus/#css3-properties
+  Mixins available:
+    -   css3-prefix             - arguments: Property, Value
+    -   background-gradient     - arguments: Start Color: #3C3C3C, End Color: #999999
+    -   background-horizontal   - arguments: Start Color: #3C3C3C, End Color: #999999
+    -   background-radial       - arguments: Start Color: #FFFFFF, Start position: 0%, End Color: #000000, End position: 100%
+    -   background-size         - arguments: Width: 100%, Height: 100%
+    -   background-opacity      - arguments: Color: #000, Opacity: .85
+    -   border-radius           - arguments: Radius: 5px
+    -   border-radius-separate  - arguments: Top Left: 5px, Top Right: 5px, Bottom Left: 5px, Bottom Right: 5px
+    -   box                     - arguments: Orientation: horizontal, Pack: center, Align: center
+    -   box-rgba                - arguments: R: 60, G: 3, B: 12, Opacity: 0.23, Color: #3C3C3C
+    -   box-shadow              - arguments: X: 2px, Y: 2px, Blur: 5px, Color: rgba(0,0,0,.4)
+    -   box-sizing              - arguments: Type: border-box
+    -   columns                 - arguments: Count: 3, Gap: 10
+    -   double-borders          - arguments: Color One: #3C3C3C, Color Two: #999999, Radius: 0
+    -   flex                    - arguments: Value: 1
+    -   flip                    - arguments: ScaleX: -1
+    -   font-face               - arguments: Font Family: myFont, Eot File Src: myFont.eot, Woff File Src: myFont.woff, Ttf File Src: myFont.ttf
+    -   opacity                 - arguments: Opacity: 0.5
+    -   outline radius          - arguments: Radius: 5px
+    -   resize                  - arguments: Direction: both
+    -   rotate                  - arguments: Degree: 0, M11: 0, M12: 0, M21: 0, M22: 0
+    CSS Matrix Rotation Calculator http://www.boogdesign.com/examples/transforms/matrix-calculator.html
+    -   text-shadow             - arguments: X: 2px, Y: 2px, Blur: 5px, Color: rgba(0,0,0,.4)
+    -   transform               - arguments: Parameters: null
+    -   transform-style         - arguments: Style: preserve-3d
+    -   transition              - Default arguments: What: all, Length: 1s, Easing: ease-in-out
+    -                           - Examples: @include transition (all 2s ease-in-out);
+    -                                        @include transition (opacity 1s ease-in 2s, width 2s ease-out);
+    -   triple-borders          - arguments: Color One: #3C3C3C, Color Two: #999999, Color Three: #000000, Radius: 0
+    -   keyframes               - arguments: Animation name
+                                - content:   Animation css
+    -   animation               - arguments: name duration timing-function delay iteration-count direction fill-mode play-state
+                                             (http://www.w3schools.com/cssref/css3_pr_animation.asp)
+------------------------------------------------------------- */
+
+// ADDS A BROWSER PREFIX TO THE PROPERTY
+@mixin css3-prefix($property, $value) {
+  -webkit-#{$property}: #{$value};
+   -khtml-#{$property}: #{$value};
+     -moz-#{$property}: #{$value};
+      -ms-#{$property}: #{$value};
+       -o-#{$property}: #{$value};
+          #{$property}: #{$value};
+}
+
+// BACKGROUND GRADIENT
+@mixin background-gradient($startColor: #3C3C3C, $endColor: #999999) {
+    background-color: $startColor;
+    background-image: -webkit-gradient(linear, left top, left bottom, from($startColor), to($endColor));
+    background-image: -webkit-linear-gradient(top, $startColor, $endColor);
+    background-image:    -moz-linear-gradient(top, $startColor, $endColor);
+    background-image:     -ms-linear-gradient(top, $startColor, $endColor);
+    background-image:      -o-linear-gradient(top, $startColor, $endColor);
+    background-image:         linear-gradient(top, $startColor, $endColor);
+    filter:            progid:DXImageTransform.Microsoft.gradient(startColorStr='#{$startColor}', endColorStr='#{$endColor}');
+}
+
+// BACKGROUND HORIZONTAL
+@mixin background-horizontal($startColor: #3C3C3C, $endColor: #999999) {
+    /*background-color: $startColor;*/
+    background-image: -webkit-gradient(linear, left top, right top, from($startColor), to($endColor));
+    background-image: -webkit-linear-gradient(left, $startColor, $endColor);
+    background-image:    -moz-linear-gradient(left, $startColor, $endColor);
+    background-image:     -ms-linear-gradient(left, $startColor, $endColor);
+    background-image:      -o-linear-gradient(left, $startColor, $endColor);
+    background-image:         linear-gradient(left, $startColor, $endColor);
+    filter:            progid:DXImageTransform.Microsoft.gradient(startColorStr='#{$startColor}', endColorStr='#{$endColor}', gradientType='1');
+}
+
+// BACKGROUND RADIAL
+@mixin background-radial($startColor: #FFFFFF, $startPos: 0%, $endColor: #000000, $endPos:100%) {
+    background: -moz-radial-gradient(center, ellipse cover, $startColor $startPos, $endColor $endPos);
+    background: -webkit-gradient(radial, center center, 0px, center center, 100%, color-stop($startPos,$startColor), color-stop($endPos,$endColor));
+    background: -webkit-radial-gradient(center, ellipse cover, $startColor $startPos,$endColor $endPos);
+    background: -o-radial-gradient(center, ellipse cover, $startColor $startPos,$endColor $endPos);
+    background: -ms-radial-gradient(center, ellipse cover, $startColor $startPos,$endColor $endPos);
+    background: radial-gradient(ellipse at center, $startColor $startPos,$endColor $endPos);
+}
+
+// BACKGROUND SIZE
+@mixin background-size($width: 100%, $height: $width) {
+  @if type-of($width) == 'number' and $height != null {
+    @include css3-prefix('background-size', $width $height);
+  } @else {
+    @include css3-prefix('background-size', $width);
+  }
+}
+
+// BACKGROUND COLOR OPACITY
+@mixin background-opacity($color: #000, $opacity: 0.85) {
+  background: $color;
+  background: rgba($color, $opacity);
+}
+
+// BORDER RADIUS
+@mixin border-radius($radius: 5px) {
+    @include css3-prefix('border-radius', $radius);
+}
+
+@mixin border-radius-separate($topLeftRadius: 5px, $topRightRadius: 5px, $bottomLeftRadius: 5px, $bottomRightRadius: 5px) {
+  -webkit-border-top-left-radius:     $topLeftRadius;
+  -webkit-border-top-right-radius:    $topRightRadius;
+  -webkit-border-bottom-right-radius: $bottomRightRadius;
+  -webkit-border-bottom-left-radius:  $bottomLeftRadius;
+
+  -moz-border-radius-topleft:     $topLeftRadius;
+  -moz-border-radius-topright:    $topRightRadius;
+  -moz-border-radius-bottomright: $bottomRightRadius;
+  -moz-border-radius-bottomleft:  $bottomLeftRadius;
+
+  border-top-left-radius:     $topLeftRadius;
+  border-top-right-radius:    $topRightRadius;
+  border-bottom-right-radius: $bottomRightRadius;
+  border-bottom-left-radius:  $bottomLeftRadius;
+}
+
+// BOX
+@mixin box($orient: horizontal, $pack: center, $align: center) {
+  display: -webkit-box;
+  display: -moz-box;
+  display: box;
+
+  @include css3-prefix('box-orient', $orient);
+  @include css3-prefix('box-pack', $pack);
+  @include css3-prefix('box-align', $align);
+}
+
+// BOX RGBA
+@mixin box-rgba($r: 60, $g: 3, $b: 12, $opacity: 0.23, $color: #3C3C3C) {
+  background-color: transparent;
+  background-color: rgba($r, $g, $b, $opacity);
+            filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#{$color}',endColorstr='#{$color}');
+            zoom:   1;
+}
+
+
+// BOX SHADOW
+@mixin box-shadow($x: 2px, $y: 2px, $blur: 5px, $color: rgba(0,0,0,.4), $inset: "") {
+  @if ($inset != "") {
+    @include css3-prefix('box-shadow', $inset $x $y $blur $color);
+  } @else {
+    @include css3-prefix('box-shadow', $x $y $blur $color);
+  }
+}
+
+// BOX SIZING
+@mixin box-sizing($type: border-box) {
+  @include css3-prefix('box-sizing', $type);
+}
+
+// COLUMNS
+@mixin columns($count: 3, $gap: 10) {
+  @include css3-prefix('column-count', $count);
+  @include css3-prefix('column-gap', $gap);
+}
+
+// DOUBLE BORDERS
+@mixin double-borders($colorOne: #3C3C3C, $colorTwo: #999999, $radius: 0) {
+  border: 1px solid $colorOne;
+
+  @include css3-prefix('box-shadow', 0 0 0 1px $colorTwo);
+
+  @include border-radius( $radius );
+}
+
+// FLEX
+@mixin flex($value: 1) {
+  @include css3-prefix('box-flex', $value);
+}
+
+// FLIP
+@mixin flip($scaleX: -1) {
+  @include css3-prefix('transform', scaleX($scaleX));
+  filter:            FlipH;
+  -ms-filter:        "FlipH";
+}
+
+// FONT FACE
+@mixin font-face($fontFamily: myFont, $eotFileSrc: 'myFont.eot', $woffFileSrc: 'myFont.woff', $ttfFileSrc: 'myFont.ttf', $svgFileSrc: 'myFont.svg', $svgFontID: '#myFont') {
+  font-family: $fontFamily;
+  src: url($eotFileSrc)  format('eot'),
+       url($woffFileSrc) format('woff'),
+       url($ttfFileSrc)  format('truetype'),
+       url($svgFileSrc + $svgFontID) format('svg');
+}
+
+// OPACITY
+@mixin opacity($opacity: 0.5) {
+    $opacityMultiplied: ($opacity * 100);
+
+    filter:         alpha(opacity=$opacityMultiplied);
+    -ms-filter:     "progid:DXImageTransform.Microsoft.Alpha(Opacity=" + $opacityMultiplied + ")";
+    @include css3-prefix('opacity', $opacity);
+}
+
+
+// OUTLINE RADIUS
+@mixin outline-radius($radius: 5px) {
+  @include css3-prefix('outline-radius', $radius);
+}
+
+// RESIZE
+@mixin resize($direction: both) {
+  @include css3-prefix('resize', $direction);
+}
+
+// ROTATE
+@mixin rotate($deg: 0, $m11: 0, $m12: 0, $m21: 0, $m22: 0) {
+  @include css3-prefix('transform', rotate($deg + deg));
+  filter: progid:DXImageTransform.Microsoft.Matrix(
+       M11=#{$m11}, M12=#{$m12}, M21=#{$m21}, M22=#{$m22}, sizingMethod='auto expand');
+    zoom: 1;
+}
+
+// TEXT SHADOW
+@mixin text-shadow($x: 2px, $y: 2px, $blur: 5px, $color: rgba(0,0,0,.4)) {
+    text-shadow: $x $y $blur $color;
+}
+
+// TRANSFORM
+@mixin transform($params) {
+  @include css3-prefix('transform', $params);
+}
+
+// TRANSFORM-ORIGIN
+@mixin transform-origin($params) {
+  @include css3-prefix('transform-origin', $params);
+}
+
+// TRANSFORM STYLE
+@mixin transform-style($style: preserve-3d) {
+  @include css3-prefix('transform-style', $style);
+}
+
+// TRANSITION
+@mixin transition($properties...) {
+
+  @if length($properties) >= 1 {
+    @include css3-prefix('transition', $properties);
+  }
+
+  @else {
+    @include css3-prefix('transition',  "all 0.2s ease-in-out 0s");
+  }
+}
+
+
+// Tweening
+@mixin animate-easoutcubic($property: all, $speed: 200ms) {
+	-webkit-transition: $property $speed cubic-bezier(0.215, 0.610, 0.355, 1.000);
+	   -moz-transition: $property $speed cubic-bezier(0.215, 0.610, 0.355, 1.000);
+	     -o-transition: $property $speed cubic-bezier(0.215, 0.610, 0.355, 1.000);
+	        transition: $property $speed cubic-bezier(0.215, 0.610, 0.355, 1.000); /* easeOutCubic */
+
+	-webkit-transition-timing-function: cubic-bezier(0.215, 0.610, 0.355, 1.000);
+	   -moz-transition-timing-function: cubic-bezier(0.215, 0.610, 0.355, 1.000);
+	     -o-transition-timing-function: cubic-bezier(0.215, 0.610, 0.355, 1.000);
+	        transition-timing-function: cubic-bezier(0.215, 0.610, 0.355, 1.000); /* easeOutCubic */
+}
+
+@mixin animate-easoutquint($property: all, $speed: 200ms) {
+	-webkit-transition: $property $speed cubic-bezier(0.230, 1.000, 0.320, 1.000);
+	   -moz-transition: $property $speed cubic-bezier(0.230, 1.000, 0.320, 1.000);
+	     -o-transition: $property $speed cubic-bezier(0.230, 1.000, 0.320, 1.000);
+	        transition: $property $speed cubic-bezier(0.230, 1.000, 0.320, 1.000); /* easeOutQuint */
+
+	-webkit-transition-timing-function: cubic-bezier(0.230, 1.000, 0.320, 1.000);
+	   -moz-transition-timing-function: cubic-bezier(0.230, 1.000, 0.320, 1.000);
+	     -o-transition-timing-function: cubic-bezier(0.230, 1.000, 0.320, 1.000);
+	        transition-timing-function: cubic-bezier(0.230, 1.000, 0.320, 1.000); /* easeOutQuint */
+}
+
+
+
+// KEYFRAMES
+@mixin keyframes($animation-name) {
+  @-webkit-keyframes #{$animation-name} {
+    @content;
+  }
+  @-moz-keyframes #{$animation-name} {
+    @content;
+  }
+  @-ms-keyframes #{$animation-name} {
+    @content;
+  }
+  @-o-keyframes #{$animation-name} {
+    @content;
+  }
+  @keyframes #{$animation-name} {
+    @content;
+  }
+}
+
+// ANIMATION
+@mixin animation($str) {
+  @include css3-prefix('animation', $str);
+}
+
+//ANIMATION DELAY
+@mixin animation-delay($str) {
+  @include css3-prefix('animation-delay', $str);
+}
+
+//
+// SASS Mixins
+// --------------------------------------------------
+@mixin vertical-align {
+  position: relative;
+  top: 50%;
+  -webkit-transform: translateY(-50%);
+  -ms-transform: translateY(-50%);
+  transform: translateY(-50%);
+}
+@mixin vertical-align-absolute($top: 50%) {
+	position: absolute;
+	top: $top;
+	-webkit-transform: translateY(-50%);
+	-ms-transform: translateY(-50%);
+	transform: translateY(-50%);
+}
+@mixin vertical-align-relative($top:50%){
+	position:relative;
+	top:$top;
+	-webkit-transform: translateY(-50%);
+	-ms-transform: translateY(-50%);
+	transform: translateY(-50%);
+}
+@mixin horizontal-align-absolute($left: 50%) {
+	position: absolute !important;
+	left: $left !important;
+	-webkit-transform: translateX(-50%) !important;
+	-ms-transform: translateX(-50%) !important;
+	transform: translatex(-50%) !important;
+}
+
+@mixin center-align-absolute ($top: 50%,$left: 50%){
+  position: absolute;
+  top: $top;
+  left: $left;
+  -webkit-transform: translate(-50%,-50%);
+  -ms-transform: translate(-50%,-50%);
+  transform: translate(-50%,-50%);
+}
+
+@mixin animate($duration: 0.5s) {
+	-webkit-transition: all $duration ease;
+	-moz-transition: all $duration ease;
+	-o-transition: all $duration ease;
+	transition: all $duration ease;
+}
+
+@mixin height-and-opacity($duration: 0.4s){
+	-webkit-transition: height $duration ease-in-out, opacity $duration ease-in-out, visibility $duration ease-in-out !important;
+	-moz-transition: height $duration ease-in-out, opacity $duration ease-in-out, visibility $duration ease-in-out !important;
+	-o-transition: height $duration ease-in-out, opacity $duration ease-in-out, visibility $duration ease-in-out !important;
+	-ms-transition: height $duration ease-in-out, opacity $duration ease-in-out, visibility $duration ease-in-out !important;;
+	transition: height $duration ease-in-out, opacity $duration ease-in-out, visibility $duration ease-in-out !important;
+}
+
+@mixin min-height-animate($duration: 0.5s){
+	-webkit-transition: min-height $duration ease-in-out;
+	-moz-transition: min-height $duration ease-in-out;
+	-o-transition: min-height $duration ease-in-out;
+	-ms-transition: min-height $duration ease-in-out;
+	transition: min-height $duration ease-in-out;
+}
+
+@mixin animate-opacity ($duration-in: 0.6s, $duration-out:0.25s) {
+	-webkit-transition: opacity $duration-in linear $duration-out;
+	-moz-transition: opacity $duration-in linear $duration-out;
+	-o-transition: opacity $duration-in linear $duration-out;
+	-ms-transition: opacity $duration-in linear $duration-out;
+	transition: opacity $duration-in linear $duration-out;
+}
+@mixin nav-overlay-animation($duration: 0.6s) {
+	-webkit-transition: visibility $duration 0ms, opacity $duration linear;
+	-moz-transition: visibility $duration 0ms, opacity $duration linear;
+	-o-transition: visibility $duration 0ms, opacity $duration linear;
+	-ms-transition: visibility $duration 0ms, opacity $duration linear;
+	transition: visibility $duration 0ms, opacity $duration linear;
+}
+@mixin box-shadow-mixin($px: 3px, $color: $bg-color-4)
+{
+	-moz-box-shadow: 0 0 $px $color;
+	-webkit-box-shadow: 0 0 $px $color;
+	box-shadow: 0 0 $px $color;
+}
+@mixin gallery-gradient($start_dir, $end_dir, $color1, $color2) {
+	background-image: -webkit-gradient(
+		linear,
+		$start_dir,
+		$end_dir,
+		color-stop(0, $color1),
+		color-stop(1, $color2)
+	);
+	background-image: -o-linear-gradient($end_dir, $color1 0%, $color2 100%);
+	background-image: -moz-linear-gradient($end_dir, $color1 0%, $color2 100%);
+	background-image: -webkit-linear-gradient($end_dir, $color1 0%, $color2 100%);
+	background-image: -ms-linear-gradient($end_dir, $color1 0%, $color2 100%);
+	background-image: linear-gradient(to $end_dir, $color1 0%, $color2 100%);
+}
+@mixin user-select-none(){
+	-webkit-user-select: none;
+	-moz-user-select: none;
+	-ms-user-select: none;
+}
+@mixin rotation($deg: 45deg) {
+	-webkit-transform: rotate($deg);
+	-moz-transform: rotate($deg);
+	-o-transform: rotate($deg);
+	transform: rotate($deg);
+}
+@mixin column-reverse-mobile(){
+	@media (max-width:$screen-xs-max) {
+		display: -webkit-flex;
+		display: flex;
+		-webkit-flex-direction: column-reverse;
+		flex-direction: column-reverse;
+	}
+}
+
+@mixin column-reverse-tablet(){
+	@media (min-width:$screen-sm-min) and (max-width: $screen-sm-max){
+		display: -webkit-flex;
+		display: flex;
+		-webkit-flex-direction: column-reverse;
+		flex-direction: column-reverse;
+	}
+}
+
+@mixin color-and-background($duration:0.5s){
+	-webkit-transition: background-color $duration ease-in-out, color $duration ease-in-out, border-color $duration ease-in-out;
+    -moz-transition: background-color $duration ease-in-out, color $duration ease-in-out, border-color $duration ease-in-out;
+    -o-transition: background-color $duration ease-in-out, color $duration ease-in-out, border-color $duration ease-in-out;
+    transition: background-color $duration ease-in-out, color $duration ease-in-out, border-color $duration ease-in-out;
+}
+@mixin background-animation ($duration: 0.5s){
+	-webkit-transition: background-color $duration ease-in-out;
+    -moz-transition: background-color $duration ease-in-out;
+    -o-transition: background-color $duration ease-in-out;
+    transition: background-color $duration ease-in-out;
+}
+@mixin height-animation($duration: 0.4s){
+	-webkit-transition: height $duration ease-in-out;
+	-moz-transition: height $duration ease-in-out;
+	-o-transition: height $duration ease-in-out;
+	-ms-transition: height $duration ease-in-out;
+	transition: height $duration ease-in-out;
+}
+@mixin max-height-padding-animate($duration: 0.5s){
+	-webkit-transition: max-height $duration ease-in-out, top $duration ease-in-out, padding-top $duration ease 0.09s, opacity $duration ease-in-out;
+	-moz-transition: max-height $duration ease-in-out, top $duration ease-in-out, padding-top $duration ease 0.09s, opacity $duration ease-in-out;
+	-o-transition: max-height $duration ease-in-out, top $duration ease-in-out, padding-top $duration ease 0.09s, opacity $duration ease-in-out;
+	-ms-transition: max-height $duration ease-in-out, top $duration ease-in-out, padding-top $duration ease 0.09s, opacity $duration ease-in-out;
+	transition: max-height $duration ease-in-out, top $duration ease-in-out, padding-top $duration ease 0.09s, opacity $duration ease-in-out;
+}
+@mixin max-height-animate ($duration: 0.5s){
+	-webkit-transition: max-height $duration ease-in-out;
+	-moz-transition: max-height $duration ease-in-out;
+	-o-transition: max-height $duration ease-in-out;
+	transition: max-height $duration ease-in-out;
+}
+@mixin opacity-animation($duration: 0.4s){
+	-webkit-transition: opacity $duration ease-in-out;
+	-moz-transition: opacity $duration ease-in-out;
+	-o-transition: opacity $duration ease-in-out;
+	-ms-transition: opacity $duration ease-in-out;
+	transition: opacity $duration ease-in-out;
+}
+
+
+
+
+//aspect ratio
+@mixin aspect-ratio($width, $height) {
+  position: relative;
+  &:before {
+    display: block;
+    content: "";
+    width: 100%;
+    padding-top: ($height / $width) * 100%;
+  }
+  > .content {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+  }
+}
+
+
+
+
+
+
+
+// antialiasing mode font rendering
+@mixin font-smoothing {
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+
+
+
+
+
+// TRIPLE BORDERS
+@mixin triple-borders($colorOne: #3C3C3C, $colorTwo: #999999, $colorThree: #000000, $radius: 0) {
+    border: 1px solid $colorOne;
+
+    @include border-radius($radius);
+
+    @include css3-prefix('box-shadow', "0 0 0 1px #{$colorTwo}, 0 0 0 2px #{$colorThree}");
+
+}

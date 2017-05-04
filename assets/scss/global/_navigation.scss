@@ -1,0 +1,87 @@
+.home .header.scrolling.white-header {
+  background-color: rgba(0, 0 , 0, 0.5);
+}
+.svg-logo {
+  width: 207px;
+  .white-header & .st0{
+    fill:#ffffff;
+  }
+}
+  /*--------------------------------------NAV-----------------------------------------*/
+
+.main-nav > ul {
+    float: right;
+    margin-top: 40px;
+}
+    .main-nav > ul > li {
+        position: relative;
+        display: inline-block;
+        float: left;
+        margin-left: 40px;
+        text-align: center;
+        cursor: pointer;
+        -webkit-transition: 0.2s;
+        -moz-transition: 0.2s;
+        -o-transition: 0.2s;
+        transition: 0.2s;
+    }
+        .main-nav > ul > li > a {
+            position: relative;
+            display: inline-block;
+            font:  16px 'proximanova-semibold', Arial, sans-serif;
+            color: #40464b;
+            text-decoration: none;
+            .white-header & {
+                color: #ffffff;
+            }
+        }
+        .main-nav a:hover,
+        .main-nav .current-menu-item:not(.btn-ellipse) > a,
+        .main-nav .current_page_item:not(.btn-ellipse) > a {
+            color: #fb7e22;
+            text-decoration: none;
+        }
+
+.mobile-menu {
+    padding-bottom: 70px;
+    > li {
+        position: relative;
+        > a {
+            position: relative;
+            display: block;
+            font:  16px 'proximanova-semibold', Arial, sans-serif;
+            padding: 15px 35px 13px;
+            color: #40464b;
+        }
+        a:hover,
+        &.current-menu-item > a {
+            color: #fb7e22;
+            text-decoration: none;
+        }
+    }
+    > .current-menu-item > a,
+    > li > a:hover {
+        text-decoration: none;
+    }
+    .expanded:after {
+        content: "\f107";
+        font-family: FontAwesome;
+        font-size: 16px;
+        line-height: 1;
+        text-indent: 0;
+        width: 18px;
+        height: 18px;
+        position: absolute;
+        top: 50%;
+        margin-top: -8px;
+        right: 10px;
+        display: inline-block;
+        color: #770700;
+    }
+    &:hover:after {
+        color: #0097de;
+    }
+    &.open:after {
+        content: "\f106";
+    }
+}

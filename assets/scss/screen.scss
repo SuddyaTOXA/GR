@@ -1,0 +1,25 @@
+@import 'global/variables';
+@import 'global/mixins';
+
+@import 'fonts/fonts';
+
+/*import global styles */
+@import 'global/global';
+@import 'global/magnific';
+@import 'global/buttons';
+@import 'global/header';
+@import 'global/navigation';
+@import 'global/footer';
+
+/* styles used throughout site */
+@import 'partials/product-details';
+@import 'partials/systems';
+@import 'partials/technology';
+@import 'partials/category-page';
+@import 'partials/slideshow';
+@import 'partials/where-we-operate';
+
+@import 'partials/homepage';
+
+/* media */
+@import 'global/media';

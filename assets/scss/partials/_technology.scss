@@ -1,0 +1,48 @@
+.section-our-advantages {
+  .section-title {
+    text-transform: capitalize;
+  }
+  .movable-list {
+    margin-bottom: 60px;
+  }
+}
+  .advantages-list {
+    > li {
+      float: left;
+      width: 33.33%;
+      text-align: center;
+    }
+  }
+    .advantages-wrap {
+      max-width: 250px;
+      margin: 0 auto;
+    }
+    .greyrock-dfp {
+      display: block;
+      width: 180px;
+      height: 180px;
+      margin: 0 auto;
+      padding: 30px 30px;
+      background-color: #fb7e22;
+      @include border-radius(50%);
+      span {
+        color: #fff;
+      }
+    }
+    .dfp-list {
+      overflow: hidden;
+      > li {
+        float: left;
+        width: 20%;
+        &:first-child,
+        &:last-child {
+          width: 40%;
+        }
+      }
+    }
+      .dfp-left {
+        text-align: right;
+      }
+      .dfp-right {
+        text-align: left;
+      }

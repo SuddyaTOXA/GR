@@ -1,0 +1,10 @@
+.acf_postbox p.label label {
+    font-size: 16px;
+}
+.acf_postbox .field_type-message p.label {
+    display: block !important;
+    margin-bottom: -8px;
+}
+.post-type-acf .field_type-tab {
+    display: block !important;
+}

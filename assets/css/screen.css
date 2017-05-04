@@ -1385,12 +1385,12 @@ a.banner-link {
         font-size: 28px;
         line-height: 1;
         text-indent: 0;
-        -webkit-transition: 0.35s;
-        -khtml-transition: 0.35s;
-        -moz-transition: 0.35s;
-        -ms-transition: 0.35s;
-        -o-transition: 0.35s;
-        transition: 0.35s; }
+        -webkit-transition: transform 0.35s;
+        -khtml-transition: transform 0.35s;
+        -moz-transition: transform 0.35s;
+        -ms-transition: transform 0.35s;
+        -o-transition: transform 0.35s;
+        transition: transform 0.35s; }
       .section-class .tab-name-list > li:first-child, .section-class .tab-name-list > li:last-child {
         -webkit-border-radius: 0;
         -khtml-border-radius: 0;
@@ -1462,7 +1462,8 @@ a.banner-link {
   overflow: hidden;
   display: table;
   width: 100%;
-  min-height: 400px; }
+  min-height: 400px;
+  background-color: #F6F8F7; }
   .technology-list > li {
     display: table-cell;
     width: 44.44%;
@@ -1476,20 +1477,10 @@ a.banner-link {
     .technology-list > li.left, .technology-list > li.right {
       width: 27.78%;
       vertical-align: bottom; }
-    .technology-list > li.left {
-      padding-left: 20px;
-      text-align: right; }
-    .technology-list > li.right {
-      padding-right: 20px;
-      text-align: left; }
 
 .technology-box {
   margin: 0 auto;
   max-width: 495px; }
-  .left .technology-box {
-    float: right; }
-  .right .technology-box {
-    float: left; }
   .technology-box .content {
     font-family: "proximanova-light", Arial, sans-serif;
     font-weight: 300; }

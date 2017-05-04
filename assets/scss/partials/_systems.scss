@@ -246,8 +246,14 @@
     .tab-content-list {
       > li {
         display: none;
+        //opacity: 0;
+        //-webkit-transition: all 0.5s ease;
+        //-moz-transition: all 0.5s ease;
+        //-o-transition: all 0.5s ease;
+        //transition: all 0.5s ease;
         &.show {
           display: block;
+          //opacity: 1;
         }
       }
     }
@@ -351,7 +357,7 @@
         font-size: 28px;
         line-height: 1;
         text-indent: 0;
-        @include transition(0.35s);
+        @include transition(transform 0.35s);
       }
       &:first-child,
       &:last-child {
@@ -446,6 +452,7 @@
   display: table;
   width: 100%;
   min-height: 400px;
+  background-color: #F6F8F7;
   > li {
     display: table-cell;
     width: 44.44%;
@@ -462,24 +469,16 @@
       vertical-align: bottom;
     }
     &.left {
-      padding-left: 20px;
-      text-align: right;
+      //padding-left: 20px;
     }
     &.right {
-      padding-right: 20px;
-      text-align: left;
+      //padding-right: 20px;
     }
   }
 }
       .technology-box {
         margin: 0 auto;
         max-width: 495px;
-        .left & {
-          float: right;
-        }
-        .right & {
-          float: left;
-        }
         .content {
           font-family: "proximanova-light", Arial, sans-serif;
           font-weight: 300;

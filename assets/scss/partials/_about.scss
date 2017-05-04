@@ -1,0 +1,194 @@
+.section-page-banner {
+  a.btn-play,
+  .btn-play {
+    position: absolute;
+    bottom: 53px;
+    right: 0;
+  }
+}
+
+.section-info {
+  padding-top: 92px;
+  padding-bottom: 84px;
+  text-align: center;
+  .content {
+    margin: 0 auto;
+    max-width: 1040px;
+    font-family: $font-light;
+    font-weight: 300;
+    font-size: 1.125em;
+    color: #555c62;
+    > * {
+      margin-bottom: 25px;
+      &:last-child {
+        margin-bottom: 0;
+      }
+    }
+  }
+}
+  .section-title {
+    .orange {
+      display: block;
+      margin-bottom: 1px;
+      font-family: $font-semibold;
+      font-weight: 500;
+      color: #f07317;
+    }
+  }
+
+.section-directors {
+  padding-top: 80px;
+  padding-bottom: 84px;
+  background-color: #F6F8F7;
+  .section-title {
+    margin-bottom: 40px;
+  }
+}
+  .directors-list {
+    margin: 0 -25px -50px;
+    text-align: center;
+    > li {
+      display: inline-block;
+      width: 19%;
+      margin-bottom: 50px;
+      padding: 0 25px;
+      vertical-align: top;
+    }
+  }
+    .director-img-wrap {
+      margin: 0 auto 10px;
+      max-width: 195px;
+      img {
+        max-width: 100%;
+        height: auto;
+      }
+    }
+    .director-desc {
+      .content {
+        font-family: $font-light;
+        font-weight: 300;
+        color: #636b72;
+        ul, ol {
+          li {
+            margin-left: 20px;
+          }
+        }
+      }
+    }
+      .director-name {
+        font-family: $font-semibold;
+        font-weight: 500;
+      }
+
+.section-history {
+  padding-top: 82px;
+  padding-bottom: 74px;
+  background-color: #F6F8F7;
+  .section-title {
+    margin-bottom: 70px;
+  }
+}
+      .history-list {
+        overflow: hidden;
+        position: relative;
+        &:before {
+          position: absolute;
+          content: '';
+          left: 50%;
+          top: 50%;
+          width: 6px;
+          height: calc(100% - 200px);
+          background-color: #EBE3E1;
+          -moz-transform: translate(-50%, -50%);
+          -ms-transform: translate(-50%, -50%);
+          -webkit-transform: translate(-50%, -50%);
+          -o-transform: translate(-50%, -50%);
+          transform: translate(-50%, -50%);
+        }
+        > li {
+          width: 50%;
+          margin-bottom: 146px;
+          &:nth-child(odd) {
+            float: left;
+            padding-right: 113px;
+            .history-box {
+              float: right;
+            }
+          }
+          &:nth-child(even) {
+            float: right;
+            padding-left: 122px;
+            .history-box {
+              float: left;
+            }
+            .history-year-wrap {
+              right: auto;
+              left: -169px;
+              padding: 14px 35px 14px 20px;
+              background-image: url(../../img/shape_r.png);
+              }
+          }
+          &:nth-child(2) {
+              margin-top: 170px;
+          }
+          &:last-child {
+            margin-bottom: 0;
+          }
+        }
+      }
+          .history-box {
+            position: relative;
+          }
+            .history-wrap {
+
+              max-width: 388px;
+            }
+            .history-img-wrap {
+              margin-bottom: 6px;
+              max-width: 388px;
+              img {
+                max-width: 100%;
+                height: auto;
+              }
+            }
+            .history-desc {
+              .content {
+                font-family: $font-light;
+                font-weight: 300;
+                color: #40464b;
+              }
+            }
+      .history-year-wrap {
+        position: absolute;
+        right: -160px;
+        top: 50%;
+        width: 107px;
+        height: 96px;
+        padding: 14px 20px 14px 35px;
+        color: #ffffff;
+        text-align: center;
+        background-image: url(../../img/shape_l.png);
+        background-repeat: no-repeat;
+        background-position: center;
+        background-size: contain;
+        -moz-transform: translate(0, -50%);
+        -ms-transform: translate(0, -50%);
+        -webkit-transform: translate(0, -50%);
+        -o-transform: translate(0, -50%);
+        transform: translate(0, -50%);
+      }
+        .year-wrap {
+          display: table;
+          width: 100%;
+          height: 100%;
+        }
+        .year-box {
+          display: table-cell;
+          width: 100%;
+          min-height: 10px;
+          vertical-align: middle;
+          span {
+            font-family: $font-bold;
+            font-weight: 700;
+          }
+        }

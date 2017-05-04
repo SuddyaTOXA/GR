@@ -1512,50 +1512,6 @@ a.banner-link {
   text-align: left;
   color: #40464b; }
 
-.section-our-advantages .section-title {
-  text-transform: capitalize; }
-.section-our-advantages .movable-list {
-  margin-bottom: 60px; }
-
-.advantages-list > li {
-  float: left;
-  width: 33.33%;
-  text-align: center; }
-
-.advantages-wrap {
-  max-width: 250px;
-  margin: 0 auto; }
-
-.greyrock-dfp {
-  display: block;
-  width: 180px;
-  height: 180px;
-  margin: 0 auto;
-  padding: 30px 30px;
-  background-color: #fb7e22;
-  -webkit-border-radius: 50%;
-  -khtml-border-radius: 50%;
-  -moz-border-radius: 50%;
-  -ms-border-radius: 50%;
-  -o-border-radius: 50%;
-  border-radius: 50%; }
-  .greyrock-dfp span {
-    color: #fff; }
-
-.dfp-list {
-  overflow: hidden; }
-  .dfp-list > li {
-    float: left;
-    width: 20%; }
-    .dfp-list > li:first-child, .dfp-list > li:last-child {
-      width: 40%; }
-
-.dfp-left {
-  text-align: right; }
-
-.dfp-right {
-  text-align: left; }
-
 .section-map {
   position: relative;
   background-color: #E6E6E6; }

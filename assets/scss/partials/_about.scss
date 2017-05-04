@@ -70,12 +70,14 @@
         color: #636b72;
         ul, ol {
           li {
-            margin-left: 20px;
+            list-style-position: inside;
           }
         }
       }
     }
       .director-name {
+        margin-bottom: 12px;
+        text-align: left;
         font-family: $font-semibold;
         font-weight: 500;
       }

@@ -1751,9 +1751,11 @@ img.ammapDescriptionWindowCloseButton.amcharts-description-close-img {
   font-weight: 300;
   color: #636b72; }
   .director-desc .content ul li, .director-desc .content ol li {
-    margin-left: 20px; }
+    list-style-position: inside; }
 
 .director-name {
+  margin-bottom: 12px;
+  text-align: left;
   font-family: "proximanova-semibold", Arial, sans-serif;
   font-weight: 500; }
 

@@ -1464,7 +1464,10 @@ a.banner-link {
   display: table;
   width: 100%;
   min-height: 400px;
-  background-color: #F6F8F7; }
+  background-color: #F6F8F7;
+  -webkit-box-shadow: inset 0 -4px 20px -13px black;
+  -moz-box-shadow: inset 0 -4px 20px -13px black;
+  box-shadow: inset 0 -4px 20px -13px black; }
   .technology-list > li {
     display: table-cell;
     width: 44.44%;

@@ -78,11 +78,11 @@
             &:before {
               position: absolute;
               content: '';
-              width: 3px;
-              height: 3px;
-              background-color: #636b72;;
-              left: 2px;
-              top: 10px;
+              width: 4px;
+              height: 4px;
+              background-color: #636b72;
+              left: 0;
+              top: 9px;
               @include border-radius(50%);
             }
           }

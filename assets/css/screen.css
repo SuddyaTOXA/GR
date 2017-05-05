@@ -1715,11 +1715,11 @@ img.ammapDescriptionWindowCloseButton.amcharts-description-close-img {
     .director-desc .content ul li:before, .director-desc .content ol li:before {
       position: absolute;
       content: '';
-      width: 3px;
-      height: 3px;
+      width: 4px;
+      height: 4px;
       background-color: #636b72;
-      left: 2px;
-      top: 10px;
+      left: 0;
+      top: 9px;
       -webkit-border-radius: 50%;
       -khtml-border-radius: 50%;
       -moz-border-radius: 50%;
@@ -1728,7 +1728,7 @@ img.ammapDescriptionWindowCloseButton.amcharts-description-close-img {
       border-radius: 50%; }
 
 .director-name {
-  margin-bottom: 12px;
+  margin-bottom: 8px;
   text-align: left;
   font-family: "proximanova-semibold", Arial, sans-serif;
   font-weight: 500; }

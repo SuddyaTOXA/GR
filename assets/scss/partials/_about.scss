@@ -70,7 +70,21 @@
         color: #636b72;
         ul, ol {
           li {
+            position: relative;
+            list-style: none;
             list-style-position: inside;
+            text-indent: 10px;
+            margin-bottom: -1px;
+            &:before {
+              position: absolute;
+              content: '';
+              width: 3px;
+              height: 3px;
+              background-color: #636b72;;
+              left: 2px;
+              top: 10px;
+              @include border-radius(50%);
+            }
           }
         }
       }

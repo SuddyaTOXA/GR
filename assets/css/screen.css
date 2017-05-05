@@ -1707,7 +1707,25 @@ img.ammapDescriptionWindowCloseButton.amcharts-description-close-img {
   font-weight: 300;
   color: #636b72; }
   .director-desc .content ul li, .director-desc .content ol li {
-    list-style-position: inside; }
+    position: relative;
+    list-style: none;
+    list-style-position: inside;
+    text-indent: 10px;
+    margin-bottom: -1px; }
+    .director-desc .content ul li:before, .director-desc .content ol li:before {
+      position: absolute;
+      content: '';
+      width: 3px;
+      height: 3px;
+      background-color: #636b72;
+      left: 2px;
+      top: 10px;
+      -webkit-border-radius: 50%;
+      -khtml-border-radius: 50%;
+      -moz-border-radius: 50%;
+      -ms-border-radius: 50%;
+      -o-border-radius: 50%;
+      border-radius: 50%; }
 
 .director-name {
   margin-bottom: 12px;

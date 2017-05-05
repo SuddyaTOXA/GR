@@ -1,9 +1,61 @@
+.invisible {
+  opacity: 0;
+}
+
+/*adding all elements that are animated to this section so there is no flicker*/
+.btn, .section-page-banner {
+  opacity: 0;
+}
+.btn {
+  animation-delay: 0.25s; -webkit-animation-delay: 0.25s;
+}
+
+/* @group homepage animation delay */
+
+  .watch-block-list > li,
+  .technology-list > li,
+  .tab-name-list > li,
+  .specifications-list > li {
+    @for $i from 1 through 10 {
+        &:nth-child(#{$i}) { 
+            animation-delay: $i * 0.075s; -webkit-animation-delay: $i * 0.075s;  
+            // .level-box .level-title, .level-box .content, .btn {
+            //   animation-delay: $i * 0.100s; -webkit-animation-delay: $i * 0.100s;
+            // }
+            // .level-img-wrap {
+            //   animation-delay: $i * 0.225s; -webkit-animation-delay: $i * 0.225s;
+            // }
+
+        }
+    }
+  }
+
+
+  /*@end*/
+
+  .level3-list > li {
+    @for $i from 1 through 4 {
+        &:nth-child(#{$i}) { 
+             animation-delay: $i * 0.075s; -webkit-animation-delay: $i * 0.075s;  
+           
+        }
+    }
+  }
+
+  
+
+ .info-box {
+  animation-delay: 0.100s; -webkit-animation-delay: 0.100s;
+ }
+  
+
+
+
 @-webkit-keyframes fadeInUpCustom {
   from {
     opacity: 0;
-   @include transform(translate3d(0, 5%, 0));
-    /* -webkit-transform: translate3d(0, 1%, 0) !important;
-    transform: translate3d(0, 1%, 0) !important; */
+   @include transform(translate3d(0, 50%, 0));
+
   }
   to {
     opacity: 1;
@@ -15,9 +67,8 @@
 @keyframes fadeInUpCustom {
   from {
     opacity: 0;
-    @include transform(translate3d(0, 5%, 0));
-  /*   -webkit-transform: translate3d(0, 1%, 0) !important;
-  transform: translate3d(0, 1%, 0) !important; */
+    @include transform(translate3d(0, 50%, 0));
+
   }
 
   to {
@@ -29,6 +80,37 @@
 .fadeInUpCustom {
   -webkit-animation-name: fadeInUpCustom;
   animation-name: fadeInUpCustom;
+}
+
+@-webkit-keyframes fadeInUpSmall {
+  from {
+    opacity: 0;
+   @include transform(translate3d(0, 5%, 0));
+
+  }
+  to {
+    opacity: 1;
+    -webkit-transform: none;
+    transform: none;
+  }
+}
+
+@keyframes fadeInUpSmall {
+  from {
+    opacity: 0;
+    @include transform(translate3d(0, 5%, 0));
+
+  }
+
+  to {
+    opacity: 1;
+    -webkit-transform: none;
+    transform: none;
+  }
+}
+.fadeInUpSmall {
+  -webkit-animation-name: fadeInUpSmall;
+  animation-name: fadeInUpSmall;
 }
 
 
@@ -92,22 +174,4 @@
   }
 }
 
- @include keyframes(l1) {
-    0%    { height: 0; background-color: $border-color-5; }
-    100%  { height: $resultingw; background-color: $border-color-5; width: $animatedWidth; }
-  }
-
-  @include keyframes(l2) {
-    0%    { width: 0; background-color: $border-color-5; }
-    100%  { width: $resultingw; background-color: $border-color-5; height:$animatedWidth;}
-  }
-
-  @include keyframes(l3) {
-    0%    { height: 0; background-color: $border-color-5; }
-    100%  { height: $resultingw; background-color: $border-color-5; width: $animatedWidth;}
-  }
-
-  @include keyframes(l4) {
-    0%    { width: 0; background-color: $border-color-5; }
-    100%  { width: $resultingw; background-color: $border-color-5; height:$animatedWidth;}
-  }
+ 

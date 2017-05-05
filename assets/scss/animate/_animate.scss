@@ -1370,11 +1370,11 @@ Copyright (c) 2015 Daniel Eden
   animation-name: fadeInRightBig;
 }
 
-@-webkit-keyframes fadeInUp {
+@-webkit-keyframes fadeInUp { 
   from {
     opacity: 0;
-    -webkit-transform: translate3d(0, 5%, 0);
-    transform: translate3d(0, 5%, 0);
+    -webkit-transform: translate3d(0, 100%, 0);
+    transform: translate3d(0, 100%, 0);
   }
 
   to {
@@ -1386,8 +1386,8 @@ Copyright (c) 2015 Daniel Eden
 @keyframes fadeInUp {
   from {
     opacity: 0;
-    -webkit-transform: translate3d(0, 5%, 0);
-    transform: translate3d(0, 5%, 0);
+    -webkit-transform: translate3d(0, 100%, 0);
+    transform: translate3d(0, 100%, 0);
   }
 
   to {

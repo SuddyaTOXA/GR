@@ -212,5 +212,39 @@ jQuery(document).ready(function($) {
         });
     });
 
+    /*viewportchecker to trigger animations throughout*/
+    $(".news-box").addClass("invisible").viewportChecker({
+        classToAdd: 'visible animated slideInRight',
+        offset: 100
+    });
+
+    $(".section-title, .btn, .banner-title, .history-img-wrap, .history-desc, .technology-list li, .tab-name-list li, .tab-content-list li:first-child .specifications-list > li, .tab-content-list li:first-child p, .tab-content-list li:first-child .tab-block-title").addClass("invisible").viewportChecker({
+        classToAdd: 'visible animated fadeInUpSmall',
+        offset: 100
+    });
+    
+    $(".tab-content-list li:first-child .tab-right-block").addClass("invisible").viewportChecker({
+        classToAdd: 'visible animated fadeInUpSmall',
+        offset: 20
+    });
+    $(".watch-block-list li, footer").addClass("invisible").viewportChecker({
+        classToAdd: 'visible animated fadeInUpSmall',
+        offset: 20
+    });
+    $(".video-slider, .section-page-banner, .history-year-wrap, .directors-list, h2, h3:not(.tab-block-title), .section-movable-systems p, .section-movable-systems img").addClass("invisible").viewportChecker({
+        classToAdd: 'visible animated fadeIn',
+        offset: 100
+    });
+
+
+    
+    // $(".level-list > li, .bottom-nav-list > li").addClass("invisible").viewportChecker({
+    //     classToAdd: 'visible animated fadeIn',
+    //     offset: 100,
+    //     removeClassAfterAnimation: true
+    // });
+    
+    /*end viewportchecker*/
+
 
 });

@@ -116,6 +116,8 @@
 
                 .swiper-slide a.btn-play {
                     margin-left: 5px;
+                    animation-delay: 1* 0.75s; 
+                    -webkit-animation-delay: 1 * 0.75s;
                     /*opacity: 0;
                     transform: translateY(50%);
                     -webkit-transform: translateY(50%);

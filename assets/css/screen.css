@@ -3890,6 +3890,7 @@ a.banner-link {
 
 .section-map {
   position: relative;
+  height: 100vh;
   background-color: #E6E6E6; }
 
 .section-map-description {
@@ -4024,6 +4025,95 @@ img.ammapDescriptionWindowCloseButton.amcharts-description-close-img {
   font-size: 1em;
   line-height: 1.4;
   color: #2e3235; }
+
+#map {
+  position: absolute;
+  top: 0;
+  height: 100vh;
+  width: 100%; }
+
+.marker-custom {
+  position: relative;
+  z-index: 100;
+  display: block;
+  width: 22px;
+  height: 22px;
+  margin: 50px;
+  background-color: transparent;
+  cursor: pointer;
+  -webkit-border-radius: 50%;
+  -khtml-border-radius: 50%;
+  -moz-border-radius: 50%;
+  -ms-border-radius: 50%;
+  -o-border-radius: 50%;
+  border-radius: 50%; }
+  .marker-custom:after {
+    position: absolute;
+    z-index: 99;
+    content: '';
+    width: 22px;
+    height: 22px;
+    top: 50%;
+    left: 50%;
+    /* Permalink - use to edit and share this gradient: http://colorzilla.com/gradient-editor/#ffffff+50,f37b23+81,f37b23+82,f37b23+100 */
+    background: #ffffff;
+    /* Old browsers */
+    background: -moz-radial-gradient(center, ellipse cover, #ffffff 50%, #f37b23 81%, #f37b23 82%, #f37b23 100%);
+    /* FF3.6-15 */
+    background: -webkit-radial-gradient(center, ellipse cover, #ffffff 50%, #f37b23 81%, #f37b23 82%, #f37b23 100%);
+    /* Chrome10-25,Safari5.1-6 */
+    background: radial-gradient(ellipse at center, #ffffff 50%, #f37b23 81%, #f37b23 82%, #f37b23 100%);
+    /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+    filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#ffffff', endColorstr='#f37b23', GradientType=1);
+    /* IE6-9 fallback on horizontal gradient */
+    -webkit-border-radius: 50%;
+    -khtml-border-radius: 50%;
+    -moz-border-radius: 50%;
+    -ms-border-radius: 50%;
+    -o-border-radius: 50%;
+    border-radius: 50%;
+    -moz-transform: translate(-50%, -50%);
+    -ms-transform: translate(-50%, -50%);
+    -webkit-transform: translate(-50%, -50%);
+    -o-transform: translate(-50%, -50%);
+    transform: translate(-50%, -50%); }
+  .marker-custom:before {
+    position: absolute;
+    z-index: 200;
+    content: '';
+    width: 10px;
+    height: 10px;
+    top: 50%;
+    left: 50%;
+    background: #f37b23;
+    -webkit-border-radius: 50%;
+    -khtml-border-radius: 50%;
+    -moz-border-radius: 50%;
+    -ms-border-radius: 50%;
+    -o-border-radius: 50%;
+    border-radius: 50%;
+    -moz-transform: translate(-50%, -50%);
+    -ms-transform: translate(-50%, -50%);
+    -webkit-transform: translate(-50%, -50%);
+    -o-transform: translate(-50%, -50%);
+    transform: translate(-50%, -50%); }
+  .marker-custom:hover:after {
+    background: rgba(243, 123, 35, 0.45); }
+
+.mapboxgl-popup {
+  max-width: 250px;
+  text-align: center;
+  font: 400 16px/22px "proximanova-regular", Arial, sans-serif;
+  color: #2e3235; }
+
+.mapboxgl-popup-content {
+  padding: 18px 30px 24px; }
+  .mapboxgl-popup-content img {
+    margin-bottom: 7px; }
+
+.mapboxgl-ctrl-bottom-left,
+.mapboxgl-ctrl-bottom-right {
+  display: none !important; }
 
 .section-page-banner a.btn-play,
 .section-page-banner .btn-play {

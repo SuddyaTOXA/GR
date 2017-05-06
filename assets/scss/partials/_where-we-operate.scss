@@ -161,7 +161,6 @@ img.ammapDescriptionWindowCloseButton.amcharts-description-close-img {
   width:100%;
 }
   .marker-custom {
-    position: relative;
     z-index: 100;
     display: block;
     width: 22px;
@@ -229,4 +228,15 @@ img.ammapDescriptionWindowCloseButton.amcharts-description-close-img {
 .mapboxgl-ctrl-bottom-left,
 .mapboxgl-ctrl-bottom-right {
   display: none !important;
+}
+.marker {
+  width: 22px;
+  height: 22px;
+  background-image: url(../../img/mrker.png) !important;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: contain;
+  &:hover {
+    background-image: url(../../img/mrker_h.png) !important;
+  }
 }

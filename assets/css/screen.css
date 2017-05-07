@@ -3990,13 +3990,7 @@ a.banner-link {
   max-width: 250px;
   text-align: center;
   font: 400 16px/22px "proximanova-regular", Arial, sans-serif;
-  color: #2e3235;
-  -webkit-transition: 0.35s;
-  -khtml-transition: 0.35s;
-  -moz-transition: 0.35s;
-  -ms-transition: 0.35s;
-  -o-transition: 0.35s;
-  transition: 0.35s; }
+  color: #2e3235; }
 
 .mapboxgl-popup-content {
   padding: 18px 30px 24px;

@@ -2264,7 +2264,7 @@ Copyright (c) 2015 Daniel Eden
   opacity: 0; }
 
 /*adding all elements that are animated to this section so there is no flicker*/
-.btn, .section-page-banner {
+.btn:not(.btn-download), .section-page-banner {
   opacity: 0; }
 
 .btn {
@@ -2411,58 +2411,62 @@ Copyright (c) 2015 Daniel Eden
   -webkit-animation-name: fadeInUpSmall;
   animation-name: fadeInUpSmall; }
 
-@-webkit-keyframes wobbleArrow {
+@-webkit-keyframes bounceInSmall {
+  from, 20%, 40%, 60%, 80%, to {
+    -webkit-animation-timing-function: cubic-bezier(0.215, 0.61, 0.355, 1);
+    animation-timing-function: cubic-bezier(0.215, 0.61, 0.355, 1); }
+  0% {
+    opacity: 0;
+    -webkit-transform: scale3d(0.3, 0.3, 0.3);
+    transform: scale3d(0.3, 0.3, 0.3); }
+  20% {
+    -webkit-transform: scale3d(1.1, 1.1, 1.1);
+    transform: scale3d(1.1, 1.1, 1.1); }
   40% {
-    -webkit-transform: translate3d(-86%, -12%, 0);
-    transform: translate3d(-86%, -12%, 0); }
-  /* 33.3% {
-     -webkit-transform: translate3d(-39%, -60%, 0);
-     transform: translate3d(-39%, -60%, 0);
-   }*/
-  /*49.95% {
-    -webkit-transform: translate3d(-66%, -33%, 0);
-    transform: translate3d(-66%, -33%, 0);
-  }*/
-  /*66.6% {
-    -webkit-transform: translate3d(-39%, -60%, 0);
-    transform: translate3d(-39%, -60%, 0);
-  }
-  83.25% {
-    -webkit-transform: translate3d(-50%, -50%, 0);
-    transform: translate3d(-50%, -50%, 0);
-  }*/
-  100% {
-    -webkit-transform: translate3d(-50%, -50%, 0);
-    transform: translate3d(-50%, -50%, 0); } }
-@keyframes wobbleArrow {
+    -webkit-transform: scale3d(0.98, 0.98, 0.98);
+    transform: scale3d(0.98, 0.98, 0.98); }
+  60% {
+    opacity: 1;
+    -webkit-transform: scale3d(1, 1, 1);
+    transform: scale3d(1, 1, 1); }
+  80% {
+    -webkit-transform: scale3d(1, 1, 1);
+    transform: scale3d(1, 1, 1); }
+  to {
+    opacity: 1;
+    -webkit-transform: scale3d(1, 1, 1);
+    transform: scale3d(1, 1, 1); } }
+@keyframes bounceInSmall {
+  from, 20%, 40%, 60%, 80%, to {
+    -webkit-animation-timing-function: cubic-bezier(0.215, 0.61, 0.355, 1);
+    animation-timing-function: cubic-bezier(0.215, 0.61, 0.355, 1); }
+  0% {
+    opacity: 0;
+    -webkit-transform: scale3d(0.3, 0.3, 0.3);
+    transform: scale3d(0.3, 0.3, 0.3); }
+  20% {
+    -webkit-transform: scale3d(1.1, 1.1, 1.1);
+    transform: scale3d(1.1, 1.1, 1.1); }
   40% {
-    -webkit-transform: translate3d(-86%, -12%, 0);
-    -ms-transform: translate3d(-86%, -12%, 0);
-    transform: translate3d(-86%, -12%, 0); }
-  /*33.3% {
-    -webkit-transform: translate3d(-39%, -60%, 0);
-    -ms-transform: translate3d(-39%, -60%, 0);
-    transform: translate3d(-39%, -60%, 0);
-  }*/
-  /*49.95% {
-    -webkit-transform: translate3d(-66%, -33%, 0);
-    -ms-transform: translate3d(-66%, -33%, 0);
-    transform: translate3d(-66%, -33%, 0);
-  }*/
-  /*66.6% {
-    -webkit-transform: translate3d(-39%, -60%, 0);
-    -ms-transform: translate3d(-39%, -60%, 0);
-    transform: translate3d(-39%, -60%, 0);
-  }
-  83.25% {
-    -webkit-transform: translate3d(-50%, -50%, 0);
-    -ms-transform: translate3d(-50%, -50%, 0);
-    transform: translate3d(-50%, -50%, 0);
-  }*/
-  100% {
-    -webkit-transform: translate3d(-50%, -50%, 0);
-    -ms-transform: translate3d(-50%, -50%, 0);
-    transform: translate3d(-50%, -50%, 0); } }
+    -webkit-transform: scale3d(0.98, 0.98, 0.98);
+    transform: scale3d(0.98, 0.98, 0.98); }
+  60% {
+    opacity: 1;
+    -webkit-transform: scale3d(1, 1, 1);
+    transform: scale3d(1, 1, 1); }
+  80% {
+    -webkit-transform: scale3d(1, 1, 1);
+    transform: scale3d(1, 1, 1); }
+  to {
+    opacity: 1;
+    -webkit-transform: scale3d(1, 1, 1);
+    transform: scale3d(1, 1, 1); } }
+.bounceInSmall {
+  -webkit-animation-name: bounceInSmall;
+  animation-name: bounceInSmall;
+  -webkit-animation-duration: 0.75s;
+  animation-duration: 0.75s; }
+
 /*import global styles */
 /*----------------------------------------------------------------------------------*/
 /*------------------------------RESET DEFAULT STYLES--------------------------------*/
@@ -3334,10 +3338,50 @@ a.btn-download,
     color: #ffffff; }
 
 .main-nav a:hover,
+.white-header .main-nav a:hover,
 .main-nav .current-menu-item:not(.btn-ellipse) > a,
 .main-nav .current_page_item:not(.btn-ellipse) > a {
   color: #fb7e22;
   text-decoration: none; }
+
+/* Effect 1: Brackets */
+.main-nav li a::before,
+.main-nav li a::after {
+  display: inline-block;
+  opacity: 0;
+  -webkit-transition: -webkit-transform 0.3s, opacity 0.2s;
+  -moz-transition: -moz-transform 0.3s, opacity 0.2s;
+  transition: transform 0.3s, opacity 0.2s;
+  position: absolute; }
+
+.main-nav li a::before {
+  margin-right: 10px;
+  content: '[';
+  -webkit-transform: translateX(20px);
+  -moz-transform: translateX(20px);
+  transform: translateX(20px);
+  left: -10px; }
+
+.main-nav li a::after {
+  margin-left: 10px;
+  content: ']';
+  -webkit-transform: translateX(-20px);
+  -moz-transform: translateX(-20px);
+  transform: translateX(-20px);
+  right: -10px; }
+
+.main-nav li a:hover::before,
+.main-nav li a:hover::after,
+.main-nav li a:focus::before,
+.main-nav li a:focus::after {
+  opacity: 1;
+  -webkit-transform: translateX(0px);
+  -moz-transform: translateX(0px);
+  transform: translateX(0px); }
+
+.main-nav li.btn-ellipse a::before,
+.main-nav li.btn-ellipse a::after {
+  opacity: 0 !important; }
 
 .mobile-menu {
   padding-bottom: 70px; }
@@ -3725,7 +3769,6 @@ a.banner-link {
   .section-class .container {
     max-width: 1400px; }
   .section-class .tab-block {
-    overflow: hidden;
     position: relative;
     z-index: 2;
     margin-top: 0;
@@ -3744,12 +3787,12 @@ a.banner-link {
       -moz-box-shadow: 1px 1px 15px rgba(0, 0, 0, 0.15);
       -o-box-shadow: 1px 1px 15px rgba(0, 0, 0, 0.15);
       box-shadow: 1px 1px 15px rgba(0, 0, 0, 0.15);
-      -webkit-transition: 0.35s;
-      -khtml-transition: 0.35s;
-      -moz-transition: 0.35s;
-      -ms-transition: 0.35s;
-      -o-transition: 0.35s;
-      transition: 0.35s;
+      -webkit-transition: 0.15s;
+      -khtml-transition: 0.15s;
+      -moz-transition: 0.15s;
+      -ms-transition: 0.15s;
+      -o-transition: 0.15s;
+      transition: 0.15s;
       background-color: #FFFFFF; }
       .section-class .tab-name-list > li:after {
         position: absolute;
@@ -3780,7 +3823,9 @@ a.banner-link {
         color: #FFFFFF;
         background-color: rgba(251, 126, 34, 0.8); }
       .section-class .tab-name-list > li.active {
-        background-color: #FB7E22; }
+        background-color: #FB7E22;
+        padding-top: 25px;
+        padding-bottom: 23px; }
         .section-class .tab-name-list > li.active:after {
           -moz-transform: rotate(-90deg);
           -ms-transform: rotate(-90deg);

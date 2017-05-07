@@ -218,32 +218,34 @@ jQuery(document).ready(function($) {
         offset: 100
     });
 
-    $(".section-title, .btn, .banner-title, .history-img-wrap, .history-desc, .technology-list li, .tab-name-list li, .tab-content-list li:first-child .specifications-list > li, .tab-content-list li:first-child p, .tab-content-list li:first-child .tab-block-title").addClass("invisible").viewportChecker({
+    $(".section-title, .btn, .banner-title, .history-img-wrap, .history-desc, .technology-list li, .tab-name-list li, .tab-content-list li:first-child .specifications-list > li, .tab-content-list li:first-child p, .tab-content-list li:first-child .tab-block-title, .section-structure img").addClass("invisible").viewportChecker({
         classToAdd: 'visible animated fadeInUpSmall',
         offset: 100
     });
-    
+
     $(".tab-content-list li:first-child .tab-right-block").addClass("invisible").viewportChecker({
         classToAdd: 'visible animated fadeInUpSmall',
         offset: 20
     });
+
+
+
     $(".watch-block-list li, footer").addClass("invisible").viewportChecker({
         classToAdd: 'visible animated fadeInUpSmall',
         offset: 20
     });
-    $(".video-slider, .section-page-banner, .history-year-wrap, .directors-list, h2, h3:not(.tab-block-title), .section-movable-systems p, .section-movable-systems img").addClass("invisible").viewportChecker({
+    $(".video-slider, .section-page-banner, .history-year-wrap, .directors-list, h2, h3:not(.tab-block-title), h4, .section-movable-systems p, .section-movable-systems img, .structure-box, .structure-list").addClass("invisible").viewportChecker({
         classToAdd: 'visible animated fadeIn',
         offset: 100
     });
 
 
-    
-    // $(".level-list > li, .bottom-nav-list > li").addClass("invisible").viewportChecker({
-    //     classToAdd: 'visible animated fadeIn',
-    //     offset: 100,
-    //     removeClassAfterAnimation: true
-    // });
-    
+    /*fixed some tab elements that were being hidden, and adding animation classes for transition*/
+    $(".tab-content-list li .tab-right-block").addClass("animated bounceInSmall");
+    $(".btn-download, .specifications-list li, .tab-content-list p,  .tab-content-list h3").removeClass("invisible").addClass("animated fadeInUpSmall");
+    // end fixes
+
+
     /*end viewportchecker*/
 
 

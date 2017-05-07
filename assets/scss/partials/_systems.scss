@@ -325,7 +325,7 @@
     max-width: 1400px;
   }
   .tab-block {
-    overflow: hidden;
+    //overflow: hidden;
     position: relative;
     z-index: 2;
     margin-top: 0;
@@ -345,7 +345,7 @@
       -moz-box-shadow: 1px 1px 15px rgba(0, 0, 0, 0.15);
       -o-box-shadow: 1px 1px 15px rgba(0, 0, 0, 0.15);
       box-shadow: 1px 1px 15px rgba(0, 0, 0, 0.15);
-      @include transition(0.35s);
+      @include transition(0.15s);
       background-color: #FFFFFF;
       &:after {
         position: absolute;
@@ -372,6 +372,8 @@
       }
       &.active {
         background-color: #FB7E22;
+        padding-top: 25px;
+        padding-bottom: 23px;
         &:after {
           -moz-transform: rotate(-90deg);
           -ms-transform: rotate(-90deg);

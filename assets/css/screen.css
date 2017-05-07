@@ -3963,7 +3963,7 @@ a.banner-link {
 #map {
   position: absolute;
   top: 0;
-  height: 100vh;
+  height: 100%;
   width: 100%; }
 
 .marker-custom {
@@ -4839,7 +4839,13 @@ a.banner-link {
 
   a.btn-play, .btn-play {
     padding-top: 25px;
-    padding-bottom: 25px; } }
+    padding-bottom: 25px; }
+
+  .technology-list > li {
+    display: block;
+    width: 100%; }
+    .technology-list > li.left, .technology-list > li.right {
+      width: 100%; } }
 @media all and (max-width: 680px) {
   .new-img-wrap {
     float: none;

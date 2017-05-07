@@ -196,6 +196,16 @@
         padding-top: 25px;
         padding-bottom: 25px;
     }
+    .technology-list {
+        > li {
+            display: block;
+            width: 100%;
+            &.left,
+            &.right {
+                width: 100%;
+            }
+        }
+    }
 }
 @media all and (max-width: 680px) {
     .new-img-wrap {

@@ -204,10 +204,10 @@
                     });
 
                     //Create a popup, but don't add it to the map yet.
-//                    var popup = new mapboxgl.Popup({
-//                        closeButton: false,
-//                        closeOnClick: false
-//                    });
+                    var popup = new mapboxgl.Popup({
+                        closeButton: false,
+                        closeOnClick: false
+                    });
 
                     // add markers to map
                     geojson.features.forEach(function(marker) {
@@ -218,7 +218,9 @@
                         el.style.top = '-11px';
 
                         el.addEventListener('click', function() {
-                            window.alert(marker.properties.message);
+                            popup.setLngLat(marker.geometry.coordinates)
+                                .setHTML(marker.properties.description)
+                                .addTo(map);
                         });
 
                         // add marker to map

@@ -4120,7 +4120,13 @@ img.ammapDescriptionWindowCloseButton.amcharts-description-close-img {
   background-image: url(../../img/marker.png) !important;
   background-position: center;
   background-repeat: no-repeat;
-  background-size: contain; }
+  background-size: contain;
+  -webkit-transition: 0.35s;
+  -khtml-transition: 0.35s;
+  -moz-transition: 0.35s;
+  -ms-transition: 0.35s;
+  -o-transition: 0.35s;
+  transition: 0.35s; }
   .marker:hover {
     background-image: url(../../img/marker_h.png) !important; }
 

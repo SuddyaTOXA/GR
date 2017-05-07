@@ -112,7 +112,7 @@
     background-repeat: no-repeat;
     background-size: contain;
     cursor: pointer;
-    @include transition(0.35s);
+    @include transition(background 0.35s);
     &:hover {
       background-image: url(../../img/marker_h.png) !important;
     }

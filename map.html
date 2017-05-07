@@ -192,7 +192,6 @@
 
                 map.on('load', function() {
 
-
                     // Add a layer showing the places.
                     map.addLayer({
                         "id": "places",
@@ -217,10 +216,14 @@
                         el.style.left = '-11px';
                         el.style.top = '-11px';
 
-                        el.addEventListener('click', function() {
+                        el.addEventListener('mouseenter', function() {
                             popup.setLngLat(marker.geometry.coordinates)
                                 .setHTML(marker.properties.description)
                                 .addTo(map);
+                        });
+
+                        el.addEventListener('mouseleave', function() {
+                            popup.remove();
                         });
 
                         // add marker to map
@@ -228,24 +231,6 @@
                             .setLngLat(marker.geometry.coordinates)
                             .addTo(map);
                     });
-
-
-
-//                    map.on('mouseenter', 'places', function(e) {
-//                        // Change the cursor style as a UI indicator.
-//                        map.getCanvas().style.cursor = 'pointer';
-//
-//                        // Populate the popup and set its coordinates
-//                        // based on the feature found.
-//                        popup.setLngLat(e.features[0].geometry.coordinates)
-//                            .setHTML(e.features[0].properties.description)
-//                            .addTo(map);
-//                    });
-//
-//                    map.on('mouseleave', 'places', function() {
-//                        map.getCanvas().style.cursor = '';
-//                        popup.remove();
-//                    });
 
                 });
             </script>

@@ -85,9 +85,7 @@
                         {
                             "type": "Feature",
                             "properties": {
-                                "description": "<div><img src='img/anglo-american-logo.png'><p>In partnership with AngloAmerican, Greyrock is working on XXX</p></div>",
-                                "iconSize": [22, 22]
-                                // "icon": "bar"
+                                "description": "<div><img src='img/anglo-american-logo.png'><p>In partnership with AngloAmerican, Greyrock is working on XXX</p></div>"
                             },
                             "geometry": {
                                 "coordinates": [
@@ -101,9 +99,7 @@
                         {
                             "type": "Feature",
                             "properties": {
-                                "description": "<div><img src='img/anglo-american-logo.png'><p>In partnership with AngloAmerican, Greyrock is working on XXX</p></div>",
-                                "iconSize": [22, 22]
-                                //"icon": "bar"
+                                "description": "<div><img src='img/anglo-american-logo.png'><p>In partnership with AngloAmerican, Greyrock is working on XXX</p></div>"
                             },
                             "geometry": {
                                 "coordinates": [
@@ -117,9 +113,7 @@
                         {
                             "type": "Feature",
                             "properties": {
-                                "description": "<div><img src='img/anglo-american-logo.png'><p>In partnership with AngloAmerican, Greyrock is working on XXX</p></div>",
-                                "iconSize": [22, 22]
-                                //"icon": "bar"
+                                "description": "<div><img src='img/anglo-american-logo.png'><p>In partnership with AngloAmerican, Greyrock is working on XXX</p></div>"
                             },
                             "geometry": {
                                 "coordinates": [
@@ -133,9 +127,7 @@
                         {
                             "type": "Feature",
                             "properties": {
-                                "description": "<div><img src='img/anglo-american-logo.png'><p>In partnership with AngloAmerican, Greyrock is working on XXX</p></div>",
-                                "iconSize": [22, 22]
-                                //"icon": "bar"
+                                "description": "<div><img src='img/anglo-american-logo.png'><p>In partnership with AngloAmerican, Greyrock is working on XXX</p></div>"
                             },
                             "geometry": {
                                 "coordinates": [
@@ -149,9 +141,7 @@
                         {
                             "type": "Feature",
                             "properties": {
-                                "description": "<div><img src='img/anglo-american-logo.png'><p>In partnership with AngloAmerican, Greyrock is working on XXX</p></div>",
-                                "iconSize": [22, 22]
-                                //"icon": "bar"
+                                "description": "<div><img src='img/anglo-american-logo.png'><p>In partnership with AngloAmerican, Greyrock is working on XXX</p></div>"
                             },
                             "geometry": {
                                 "coordinates": [
@@ -165,9 +155,7 @@
                         {
                             "type": "Feature",
                             "properties": {
-                                "description": "<div><img src='img/anglo-american-logo.png'><p>In partnership with AngloAmerican, Greyrock is working on XXX</p></div>",
-                                "iconSize": [22, 22]
-                                //"icon": "bar"
+                                "description": "<div><img src='img/anglo-american-logo.png'><p>In partnership with AngloAmerican, Greyrock is working on XXX</p></div>"
                             },
                             "geometry": {
                                 "coordinates": [
@@ -181,9 +169,7 @@
                         {
                             "type": "Feature",
                             "properties": {
-                                "description": "<div><img src='img/anglo-american-logo.png'><p>In partnership with AngloAmerican, Greyrock is working on XXX</p></div>",
-                                "iconSize": [22, 22]
-                                //"icon": "bar"
+                                "description": "<div><img src='img/anglo-american-logo.png'><p>In partnership with AngloAmerican, Greyrock is working on XXX</p></div>"
                             },
                             "geometry": {
                                 "coordinates": [
@@ -204,28 +190,73 @@
                     zoom: 1
                 });
 
+                var popup = new mapboxgl.Popup({
+                    closeButton: false,
+                    closeOnClick: false
+                });
+
                 // add markers to map
                 geojson.features.forEach(function(marker) {
                     // create a DOM element for the marker
                     var el = document.createElement('div');
                     el.className = 'marker';
-                    el.style.backgroundImage = 'url(https://placekitten.com/g/' + marker.properties.iconSize.join('/') + '/)';
-                    el.style.width = marker.properties.iconSize[0] + 'px';
-                    el.style.height = marker.properties.iconSize[1] + 'px';
-
-                    el.addEventListener('click', function() {
-                        window.alert(marker.properties.message);
-                    });
+                    el.style.left = '-11px';
+                    el.style.top = '-11px';
 
                     // add marker to map
-                    new mapboxgl.Marker(el, {offset: [-marker.properties.iconSize[0] / 2, -marker.properties.iconSize[1] / 2]})
+                    new mapboxgl.Marker(el)
                         .setLngLat(marker.geometry.coordinates)
+                        .addTo(map);
+                });
+
+                // Create a popup, but don't add it to the map yet.
+//                var popup = new mapboxgl.Popup({
+//                    closeButton: false,
+//                    closeOnClick: false
+//                });
+////
+//                map.on('click', function(e) {
+//                    // Change the cursor style as a UI indicator.
+//                    map.getCanvas().style.cursor = 'pointer';
+//                    console.log('Hover');
+//                    // Populate the popup and set its coordinates
+//                    // based on the feature found.
+//                    popup.setLngLat(e.features[0].geometry.coordinates)
+//                        .setHTML(e.features[0].properties.description)
+//                        .addTo(map);
+//                });
+//
+//                map.on('mouseleave', 'places', function() {
+//                    map.getCanvas().style.cursor = '';
+//                    popup.remove();
+//                });
+
+                // Add a layer showing the places.
+//                map.addLayer({
+//                    "id": "places",
+//                    "type": "symbol"
+//                });
+
+                map.on('mouseenter', 'places', function(e) {
+                    // Change the cursor style as a UI indicator.
+                    map.getCanvas().style.cursor = 'pointer';
+
+                    // Populate the popup and set its coordinates
+                    // based on the feature found.
+                    popup.setLngLat(e.features[0].geometry.coordinates)
+                        .setHTML(e.features[0].properties.description)
                         .addTo(map);
                 });
 
                 map.on('load', function() {
 
-                    // Add a layer showing the places.
+//                    const image = new Image(22, 22);
+//                            image.src = 'img/marker.png';
+//
+//                    map.addImage('gradient', image, {width: 22, height: 22});
+//
+//
+//                    // Add a layer showing the places.
 //                    map.addLayer({
 //                        "id": "places",
 //                        "type": "symbol",
@@ -233,121 +264,119 @@
 //                            "type": "geojson",
 //                            "data": {
 //                                "type": "FeatureCollection",
-//                                "features": geojson,
-////                                  {
-////                                    "type": "Feature",
-////                                    "properties": {
-////                                         "description": "<div><img src='img/anglo-american-logo.png'><p>In partnership with AngloAmerican, Greyrock is working on XXX</p></div>"
-////                                           // "icon": "bar"
-////                                    },
-////                                    "geometry": {
-////                                        "coordinates": [
-////                                            -135.258126,
-////                                            72.956123
-////                                        ],
-////                                        "type": "Point"
-////                                    },
-////                                    "id": "298412449127679e0674789daf850111"
-////                                },
-////                                    {
-////                                        "type": "Feature",
-////                                        "properties": {
-////                                             "description": "<div><img src='img/anglo-american-logo.png'><p>In partnership with AngloAmerican, Greyrock is working on XXX</p></div>"
-////                                            //"icon": "bar"
-////                                        },
-////                                        "geometry": {
-////                                            "coordinates": [
-////                                                -84.665391,
-////                                                57.084771
-////                                            ],
-////                                            "type": "Point"
-////                                        },
-////                                        "id": "60d1cc5c8d3261aa41e26ec506cd316d"
-////                                    },
-////                                    {
-////                                        "type": "Feature",
-////                                        "properties": {
-////                                             "description": "<div><img src='img/anglo-american-logo.png'><p>In partnership with AngloAmerican, Greyrock is working on XXX</p></div>"
-////                                            //"icon": "bar"
-////                                        },
-////                                        "geometry": {
-////                                            "coordinates": [
-////                                                -121.147227,
-////                                                59.958333
-////                                            ],
-////                                            "type": "Point"
-////                                        },
-////                                        "id": "6eaa422dccce12ac6e1783cbe8737eff"
-////                                    },
-////                                    {
-////                                        "type": "Feature",
-////                                        "properties": {
-////                                             "description": "<div><img src='img/anglo-american-logo.png'><p>In partnership with AngloAmerican, Greyrock is working on XXX</p></div>"
-////                                            //"icon": "bar"
-////                                        },
-////                                        "geometry": {
-////                                            "coordinates": [
-////                                                -98.432122,
-////                                                40.78474
-////                                            ],
-////                                            "type": "Point"
-////                                        },
-////                                        "id": "7e16b7727dcb850a983595f5107d69e0"
-////                                    },
-////                                    {
-////                                        "type": "Feature",
-////                                        "properties": {
-////                                             "description": "<div><img src='img/anglo-american-logo.png'><p>In partnership with AngloAmerican, Greyrock is working on XXX</p></div>"
-////                                            //"icon": "bar"
-////                                        },
-////                                        "geometry": {
-////                                            "coordinates": [
-////                                                -80.535372,
-////                                                69.774536
-////                                            ],
-////                                            "type": "Point"
-////                                        },
-////                                        "id": "82bc210cc8a5583865ae7272db0fab96"
-////                                    },
-////                                    {
-////                                        "type": "Feature",
-////                                        "properties": {
-////                                             "description": "<div><img src='img/anglo-american-logo.png'><p>In partnership with AngloAmerican, Greyrock is working on XXX</p></div>"
-////                                            //"icon": "bar"
-////                                        },
-////                                        "geometry": {
-////                                            "coordinates": [
-////                                                50.592734,
-////                                                65.747336
-////                                            ],
-////                                            "type": "Point"
-////                                        },
-////                                        "id": "a9ed46545b0ebf3a5a0b95ca157263e2"
-////                                    },
-////                                    {
-////                                        "type": "Feature",
-////                                        "properties": {
-////                                             "description": "<div><img src='img/anglo-american-logo.png'><p>In partnership with AngloAmerican, Greyrock is working on XXX</p></div>"
-////                                            //"icon": "bar"
-////                                        },
-////                                        "geometry": {
-////                                            "coordinates": [
-////                                                45.086042,
-////                                                19.569766
-////                                            ],
-////                                            "type": "Point"
-////                                        },
-////                                        "id": "de6c1dea1b79c8e1bfa26774fe09e7f8"
-////                                    }]
+//                                "features": [{
+//                                    "type": "Feature",
+//                                    "properties": {
+//                                         "description": "<div><img src='img/anglo-american-logo.png'><p>In partnership with AngloAmerican, Greyrock is working on XXX</p></div>",
+//                                         "icon": "bar"
+//                                    },
+//                                    "geometry": {
+//                                        "coordinates": [
+//                                            -135.258126,
+//                                            72.956123
+//                                        ],
+//                                        "type": "Point"
+//                                    },
+//                                    "id": "298412449127679e0674789daf850111"
+//                                },
+//                                    {
+//                                        "type": "Feature",
+//                                        "properties": {
+//                                             "description": "<div><img src='img/anglo-american-logo.png'><p>In partnership with AngloAmerican, Greyrock is working on XXX</p></div>",
+//                                            "icon": "bar"
+//                                        },
+//                                        "geometry": {
+//                                            "coordinates": [
+//                                                -84.665391,
+//                                                57.084771
+//                                            ],
+//                                            "type": "Point"
+//                                        },
+//                                        "id": "60d1cc5c8d3261aa41e26ec506cd316d"
+//                                    },
+//                                    {
+//                                        "type": "Feature",
+//                                        "properties": {
+//                                             "description": "<div><img src='img/anglo-american-logo.png'><p>In partnership with AngloAmerican, Greyrock is working on XXX</p></div>",
+//                                            "icon": "bar"
+//                                        },
+//                                        "geometry": {
+//                                            "coordinates": [
+//                                                -121.147227,
+//                                                59.958333
+//                                            ],
+//                                            "type": "Point"
+//                                        },
+//                                        "id": "6eaa422dccce12ac6e1783cbe8737eff"
+//                                    },
+//                                    {
+//                                        "type": "Feature",
+//                                        "properties": {
+//                                             "description": "<div><img src='img/anglo-american-logo.png'><p>In partnership with AngloAmerican, Greyrock is working on XXX</p></div>",
+//                                            "icon": "bar"
+//                                        },
+//                                        "geometry": {
+//                                            "coordinates": [
+//                                                -98.432122,
+//                                                40.78474
+//                                            ],
+//                                            "type": "Point"
+//                                        },
+//                                        "id": "7e16b7727dcb850a983595f5107d69e0"
+//                                    },
+//                                    {
+//                                        "type": "Feature",
+//                                        "properties": {
+//                                             "description": "<div><img src='img/anglo-american-logo.png'><p>In partnership with AngloAmerican, Greyrock is working on XXX</p></div>",
+//                                            "icon": "bar"
+//                                        },
+//                                        "geometry": {
+//                                            "coordinates": [
+//                                                -80.535372,
+//                                                69.774536
+//                                            ],
+//                                            "type": "Point"
+//                                        },
+//                                        "id": "82bc210cc8a5583865ae7272db0fab96"
+//                                    },
+//                                    {
+//                                        "type": "Feature",
+//                                        "properties": {
+//                                             "description": "<div><img src='img/anglo-american-logo.png'><p>In partnership with AngloAmerican, Greyrock is working on XXX</p></div>",
+//                                            "icon": "bar"
+//                                        },
+//                                        "geometry": {
+//                                            "coordinates": [
+//                                                50.592734,
+//                                                65.747336
+//                                            ],
+//                                            "type": "Point"
+//                                        },
+//                                        "id": "a9ed46545b0ebf3a5a0b95ca157263e2"
+//                                    },
+//                                    {
+//                                        "type": "Feature",
+//                                        "properties": {
+//                                             "description": "<div><img src='img/anglo-american-logo.png'><p>In partnership with AngloAmerican, Greyrock is working on XXX</p></div>",
+//                                            "icon": "bar"
+//                                        },
+//                                        "geometry": {
+//                                            "coordinates": [
+//                                                45.086042,
+//                                                19.569766
+//                                            ],
+//                                            "type": "Point"
+//                                        },
+//                                        "id": "de6c1dea1b79c8e1bfa26774fe09e7f8"
+//                                    }]
 //                            }
 //                        },
 //                        "layout": {
-//                            "icon-image": "{icon}-15",
-//                            "icon-allow-overlap": true
+//                            "icon-image": "gradient"
 //                        }
 //                    });
-
-                    // Create a popup, but don't add it to the map yet.
+//
+//                    //Create a popup, but don't add it to the map yet.
 //                    var popup = new mapboxgl.Popup({
 //                        closeButton: false,
 //                        closeOnClick: false
@@ -369,23 +398,6 @@
 //                        popup.remove();
 //                    });
 
-                    // add markers to map
-//                    geojson.features.forEach(function(marker) {
-//                        // create a DOM element for the marker
-//                        var el = document.createElement('div');
-//                        el.className = 'marker-custom';
-//                        el.style.width = marker.properties.iconSize[0] + 'px';
-//                        el.style.height = marker.properties.iconSize[1] + 'px';
-//
-//                        el.addEventListener('click', function() {
-//                            window.alert(marker.properties.message);
-//                        });
-//
-//                        // add marker to map
-//                        new mapboxgl.Marker(el, {offset: [-marker.properties.iconSize[0] / 2, -marker.properties.iconSize[1] / 2]})
-//                            .setLngLat(marker.geometry.coordinates)
-//                            .addTo(map);
-//                    });
                 });
             </script>
         </section>

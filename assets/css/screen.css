@@ -3935,7 +3935,9 @@ a.banner-link {
 
 .section-map {
   position: relative;
+  min-height: 400px;
   height: 100vh;
+  max-height: 630px;
   background-color: #E6E6E6; }
 
 .section-map-description {

@@ -1,13 +1,35 @@
 /*--------------------------------------MEDIA-----------------------------------------*/
-@media all and (min-width: 1920px) {
-
+@media all and (min-width: 481px) {
+    .home .header {
+        background-color: rgba(255,255,255,0);
+        @include css3-prefix('box-shadow', 'none');
+        &.scrolling {
+            &.scrolling {
+                background-color: rgba(255,255,255,0.5);
+                .white-header {
+                    background-color: rgba(0, 0 , 0, 0.5);
+                }
+            }
+        }
+    }
+    .svg-logo {
+        //.white-header & .st0{
+        //    fill:#ffffff;
+        //}
+    }
 }
 @media all and (min-width: 1680px) {
 
 }
 
 @media all and (max-width: 1400px) {
-
+    .swiper-container {
+        &.news-slider {
+            margin-left: -20px;
+            margin-right: -20px;
+            width: auto;
+        }
+    }
 }
 
 @media all and (max-width: 1280px) {
@@ -110,19 +132,8 @@
 }
 
 @media all and (max-width: 768px) {
-
-}
-
-@media all and (max-width: 767px) {
-
-}
-
-@media (max-width: 767px) and (max-height: 480px) {
-
-}
-@media all and (max-width: 736px) {
     .section {
-        padding: 30px 0 30px;
+        padding: 50px 0;
     }
     .tab-center-img-wrap,
     .section-description {
@@ -170,15 +181,23 @@
         }
     }
     .banner-title {
-        margin-bottom: 6px;
-        font-size: 1.6em;
-        line-height: 1;
+        margin-bottom: 20px;
+        font-size: 1.8em;
+        line-height: 1.25;
         br {
             display: none;
         }
     }
-    .section-watch .container {
-        min-height: auto;
+    .section-watch {
+        .container {
+            min-height: auto;
+        }
+        .watch-wrap {
+            padding: 40px 0;
+        }
+        .watch-title {
+            margin-bottom: 28px;
+        }
     }
     .watch-block-list {
         > li {
@@ -192,19 +211,34 @@
     .section-latest-news .section-title {
         margin-bottom: 31px;
     }
-    a.btn-play, .btn-play {
+    a.btn-play,
+    .btn-play {
         padding-top: 25px;
         padding-bottom: 25px;
+        padding-left: 90px;
+        &:before {
+            left: 14px;
+        }
+        &::after {
+            left: 35px;
+            margin-top: -14px;
+        }
     }
     .technology-list {
         > li {
-            display: block;
+            display: table;
             width: 100%;
             &.left,
             &.right {
                 width: 100%;
             }
         }
+    }
+    .technology-box {
+        display: table-cell;
+        height: 100%;
+        width: 100%;
+        vertical-align: middle;
     }
 }
 @media all and (max-width: 680px) {
@@ -228,12 +262,21 @@
     }
     .section-class .tab-left-block {
         padding-left: 30px;
+        &:not(:last-child) {
+            margin-bottom: 40px;
+        }
     }
 }
 
 @media all and (max-width: 640px) {
     .container {
         padding:  0 10px;
+    }
+    .swiper-container {
+        &.news-slider {
+            margin-left: -10px;
+            margin-right: -10px;
+        }
     }
 }
 
@@ -252,9 +295,9 @@
 }
 
 @media all and (max-width: 480px) {
-body.home .wrapper {
-    padding-top: 65px;
-}
+    body.home .wrapper {
+        padding-top: 65px;
+    }
     .header {
         @include animate();
         &.home {
@@ -285,7 +328,7 @@ body.home .wrapper {
     }
     a.btn-play, .btn-play {
         padding-top: 20px;
-        padding-left: 90px;
+        padding-left: 75px;
         padding-bottom: 20px;
         font-size: 1.3em;
         line-height: 1;
@@ -298,7 +341,7 @@ body.home .wrapper {
             border-top: 10px solid transparent;
             border-left: 16px solid rgba(0, 0, 0, 0.9);
             border-bottom: 10px solid transparent;
-            left: 40px;
+            left: 29px;
             margin-top: -10px;
         }
     }
@@ -321,6 +364,27 @@ body.home .wrapper {
     }
     .section-class .tab-left-block {
         padding-left: 30px;
+    }
+
+    .video-slider {
+        .swiper-slide {
+            overflow: hidden;
+        }
+        .slider-video {
+            left: 50%;
+            min-height: 350px;
+            height: 100%;
+            width: auto !important;
+            @include css3-prefix('transform', 'translateX(-50%)')
+        }
+    }
+
+    .swiper-container-horizontal {
+        > .swiper-pagination-bullets {
+            .swiper-pagination-bullet {
+                margin: 0 10px;
+            }
+        }
     }
 }
 

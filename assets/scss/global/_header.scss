@@ -5,32 +5,18 @@
     top: 0;
     left: 0;
     width: 100%;
-    height: 105px;
+    height: 100px;
     opacity: 0;
     padding-bottom: 40px;
     background-color: rgba(255,255,255,1);
-    -webkit-box-shadow: 0 1px 15px rgba(0, 0, 0, 0.1);
-    -moz-box-shadow: 0 1px 15px rgba(0, 0, 0, 0.1);
-    -o-box-shadow: 0 1px 15px rgba(0, 0, 0, 0.1);
-    box-shadow: 0 1px 15px rgba(0, 0, 0, 0.1);
+    @include css3-prefix('box-shadow', '0 1px 15px rgba(0, 0, 0, 0.1)');
     @include animate();
-    .home &{
-        background-color: rgba(255,255,255,0);
-        -webkit-box-shadow: none;
-        -moz-box-shadow: none;
-        -o-box-shadow: none;
-        box-shadow: none;
-    }
     .admin-bar &{
         top: 32px;
     }
     &.show {
         opacity:1;
     }
-    .home &.scrolling {
-        background-color: rgba(255,255,255,0.5);
-    }
-
 }
 .header:after{
     content: '';
@@ -52,17 +38,17 @@
             float: left;
             margin-top: 40px;
             max-width: 207px;
-            -webkit-transition: 0.35s;
-            -moz-transition: 0.35s;
-            -o-transition: 0.35s;
-            transition: 0.35s;
-        }
-        
-            .logo img {
+            @include css3-prefix('transition', '0.35s');
+            img {
                 max-width: 100%;
                 max-height: 100%;
                 margin-bottom: -5px;
             }
+        }
+        .svg-logo {
+            width: 207px;
+            fill: #333;
+        }
 
         .mobile-menu-wrap,
         .mobile-menu-toggle {
@@ -75,17 +61,11 @@
             height: 0;
             width: 0;
             top: 0;
-            -webkit-transition-delay: 0.35s;
-            -moz-transition-delay: 0.35s;
-            -o-transition-delay: 0.35s;
-            transition-delay: 0.35s;
+            @include css3-prefix('transition-delay', '0.35s');
             &.showing {
                 height: 100%;
                 width: 100%;
-                -webkit-transition-delay: 0s;
-                -moz-transition-delay: 0s;
-                -o-transition-delay: 0s;
-                transition-delay: 0s;
+                @include css3-prefix('transition-delay', '0s');
             }
         }
             .mobile-menu-overlay {
@@ -96,10 +76,7 @@
                 height: 100%;
                 background-color: rgba(0,0,0,0.25);
                 opacity: 0;
-                -webkit-transition: opacity 0.35s;
-                -moz-transition: opacity 0.35s;
-                -o-transition: opacity 0.35s;
-                transition: opacity 0.35s;
+                @include css3-prefix('transition', 'opacity 0.35s');
                 .showing & {
                     opacity: 1;
                 }
@@ -113,15 +90,9 @@
                 z-index: 2;
                 padding-top: 60px;
                 background-color: #fff;
-                -webkit-transition: right 0.35s;
-                -moz-transition: right 0.35s;
-                -o-transition: right 0.35s;
-                transition: right 0.35s;
+                @include css3-prefix('transition', 'right 0.35s');
                 overflow: auto;
-                -webkit-box-shadow: -10px 10px 30px rgba(0,0,0,0.2);
-                -moz-box-shadow: -10px 10px 30px rgba(0,0,0,0.2);
-                -o-box-shadow: -10px 10px 30px rgba(0,0,0,0.2);
-                box-shadow: -10px 10px 30px rgba(0,0,0,0.2);
+                @include css3-prefix('box-shadow', '-10px 10px 30px rgba(0,0,0,0.2)');
                 .showing & {
                     right: 0;
                 }
@@ -147,20 +118,13 @@
                     width: 30px;
                     background-color: rgba(251, 126, 34, 1);
                     @include border-radius(2px);
-                    -webkit-transition: all 0.35s;
-                    -moz-transition: all 0.35s;
-                    -o-transition: all 0.35s;
-                    transition: all 0.35s;
+                    @include css3-prefix('transition', 'all 0.35s');
                 }
                 span {
                     z-index: 999999;
                     left: 50%;
                     top: 50%;
-                    -moz-transform: translate(-50%, -50%);
-                    -ms-transform: translate(-50%, -50%);
-                    -webkit-transform: translate(-50%, -50%);
-                    -o-transform: translate(-50%, -50%);
-                    transform: translate(-50%, -50%);
+                    @include css3-prefix('transform', 'translate(-50%, -50%)');
                 }
                 span:before {
                     top: -9px;
@@ -172,20 +136,12 @@
                     background-color: transparent;
                 }
                 &.active span:before {
-                    -moz-transform: rotate(45deg);
-                    -ms-transform: rotate(45deg);
-                    -webkit-transform: rotate(45deg);
-                    -o-transform: rotate(45deg);
-                    transform: rotate(45deg);
+                    @include css3-prefix('transform', 'rotate(45deg)');
                     top: 0;
                     background-color: rgba(251, 126, 34, 1);
                 }
                 &.active span:after {
-                    -moz-transform: rotate(-45deg);
-                    -ms-transform: rotate(-45deg);
-                    -webkit-transform: rotate(-45deg);
-                    -o-transform: rotate(-45deg);
-                    transform: rotate(-45deg);
+                    @include css3-prefix('transform', 'rotate(-45deg)');
                     bottom: 0;
                     background-color: rgba(251, 126, 34, 1);
                 }

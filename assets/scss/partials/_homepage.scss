@@ -143,14 +143,13 @@
         .gallery-top {
             /*height: 65%;*/
             width: 100%;
-
+            min-height: 350px;
             position: relative;
             overflow: visible;
             opacity: 0;
             @include animate();
-
             &.started {
-		opacity: 1;
+		      opacity: 1;
             }
   
         }

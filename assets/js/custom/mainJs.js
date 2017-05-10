@@ -165,7 +165,8 @@ jQuery(document).ready(function($) {
             centeredSlides: true,
             paginationClickable: true,
             loop: true,
-            spaceBetween: 30
+            spaceBetween: 30,
+            noSwiping: false
         });
     }
 

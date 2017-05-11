@@ -20,6 +20,7 @@
       -moz-box-shadow: 0 0 40px rgba(0, 0, 0, 0.1);
       -o-box-shadow: 0 0 40px rgba(0, 0, 0, 0.1);
       box-shadow: 0 0 40px rgba(0, 0, 0, 0.1);
+      @include css3-prefix('box-shadow', '0 0 30px rgba(0, 0, 0, 0.1)');
     }
       .news-item-img-wrap {
         position: relative;
@@ -67,12 +68,20 @@
     }
     > * {
       padding: 0 10px;
+      &.extend {
+        padding: 0 7px;
+      }
     }
     a {
       color: #40464b;
       &:hover {
         color: #fb7e22;
         text-decoration: none;
+      }
+      .fa-long-arrow-left,
+      .fa-long-arrow-right {
+        position: relative;
+        top: 2px;
       }
     }
   }

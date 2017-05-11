@@ -454,11 +454,10 @@ filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#ffba00', end
   .swiper-container-horizontal > .swiper-pagination-bullets .swiper-pagination-bullet {
     margin: 0 14px;
   }
-
-.IIV::-webkit-media-controls-play-button,
-.IIV::-webkit-media-controls-start-playback-button {
-  opacity: 0;
-  pointer-events: none;
-  width: 5px;
-}
+  .IIV::-webkit-media-controls-play-button,
+  .IIV::-webkit-media-controls-start-playback-button {
+    opacity: 0;
+    pointer-events: none;
+    width: 5px;
+  }
 

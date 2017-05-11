@@ -141,7 +141,10 @@ jQuery(document).ready(function($) {
                     if ($(this).hasClass('swiper-slide-active')) {
                         var color = $(this).data('slideColor');
 
-                        $('video')[index].play();
+                        var video = $('video')[index];
+                        enableInlineVideo(video);
+                        setTimeout(function () { video.play(); }, 200);
+
                         console.log(index + " - PLAY");
                         console.log('------------------');
 

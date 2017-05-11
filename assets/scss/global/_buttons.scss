@@ -15,6 +15,12 @@ a.btn, .btn {
     text-align: center;
     cursor: pointer;
     text-decoration: none;
+    &.btn-blue {
+        background-color: rgb(13, 141, 222);
+        &:hover {
+            background-color: rgba(13, 141, 222, 0.8);
+        }
+    }
 }
 a.btn:hover,
 .btn:hover {

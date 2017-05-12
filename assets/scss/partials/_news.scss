@@ -16,10 +16,6 @@
       max-width: 279px;
       width: 100%;
       border: 1px solid #F1F1F1;
-      -webkit-box-shadow: 0 0 40px rgba(0, 0, 0, 0.1);
-      -moz-box-shadow: 0 0 40px rgba(0, 0, 0, 0.1);
-      -o-box-shadow: 0 0 40px rgba(0, 0, 0, 0.1);
-      box-shadow: 0 0 40px rgba(0, 0, 0, 0.1);
       @include css3-prefix('box-shadow', '0 0 30px rgba(0, 0, 0, 0.1)');
     }
       .news-item-img-wrap {

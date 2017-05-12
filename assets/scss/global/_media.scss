@@ -33,7 +33,10 @@
 }
 
 @media all and (max-width: 1280px) {
-
+    .section-page-banner a.btn-play,
+    .section-page-banner .btn-play {
+        right: 30px;
+    }
 }
 
 @media all and (max-width: 1199px) {
@@ -101,6 +104,18 @@
 }
 
 @media all and (max-width: 860px) {
+    .section-page-banner a.btn-play,
+    .section-page-banner .btn-play {
+        right: auto;
+        left: 30px;
+        bottom: 10px;
+    }
+    .banner-wrap {
+        padding-right: 0;
+    }
+    .section-page-banner .container {
+        padding-bottom: 80px;
+    }
 
 }
 
@@ -455,6 +470,11 @@
         max-width: 100%;
         img {
             width: 100%;
+        }
+    }
+    .directors-list {
+        > li {
+            width: 49%;
         }
     }
 }

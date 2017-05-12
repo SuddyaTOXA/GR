@@ -20,7 +20,7 @@
                 font: 16px 'proximanova-semibold', Arial, sans-serif;
                 color: #40464b;
                 text-decoration: none;
-                .white-header & {
+                .white-header:not(.scrolling) & {
                     color: #ffffff;
                 }
             }

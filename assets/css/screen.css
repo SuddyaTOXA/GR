@@ -3068,7 +3068,7 @@ a.btn-only-play:hover {
   font: 1em 'proximanova-semibold', Arial, sans-serif;
   background-color: transparent;
   color: #40464b; }
-  .white-header .btn-ellipse a {
+  .white-header:not(.scrolling) .btn-ellipse a {
     color: #ffffff;
     border-color: #ffffff;
     background-color: transparent; }
@@ -3342,7 +3342,7 @@ a.btn-download,
       font: 16px 'proximanova-semibold', Arial, sans-serif;
       color: #40464b;
       text-decoration: none; }
-      .white-header .main-nav > ul > li > a {
+      .white-header:not(.scrolling) .main-nav > ul > li > a {
         color: #ffffff; }
 .main-nav a:hover, .white-header .main-nav a:hover,
 .main-nav .current-menu-item:not(.btn-ellipse) > a,

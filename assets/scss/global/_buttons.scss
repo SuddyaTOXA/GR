@@ -96,7 +96,7 @@ a.btn:hover,
         font:  1em 'proximanova-semibold', Arial, sans-serif;
         background-color: transparent;
         color: #40464b;
-        .white-header & {
+        .white-header:not(.scrolling) & {
             color: #ffffff;
             border-color: #ffffff;
             background-color: transparent;

@@ -19,17 +19,25 @@
       @include css3-prefix('box-shadow', '0 0 30px rgba(0, 0, 0, 0.1)');
     }
       .news-item-img-wrap {
+        overflow: hidden;
         position: relative;
         top: -1px;
         left: -1px;
         width: calc(100% + 2px);
+        max-height: 179px;
         img {
           max-width: 100%;
           height: auto;
+          @include css3-prefix('transition', 'transform '$link-transition);
+        }
+        a:hover {
+          img {
+            @include css3-prefix('transform', 'scale(1.1)');
+          }
         }
       }
       .news-item-desc {
-        padding: 12px 15px 18px;
+        padding: 15px 15px 18px;
         .content {
           * {
             line-height: 1.2;
@@ -38,11 +46,22 @@
       }
         .news-item-title {
           margin-bottom: 10px;
-          font-size: 1.125em;
-          font-weight: 400;
-          letter-spacing: -0.05px;
-          line-height: 1.35;
+          .news-title {
+            display: inline;
+            @include transition($link-transition);
+          }
+          a:hover,
+          a:hover .news-title {
+            color: #fb7e22;
+            text-decoration: none;
+          }
         }
+          .news-title {
+            font-size: 1.125em;
+            font-weight: 400;
+            letter-spacing: -0.05px;
+            line-height: 1.35;
+          }
           .news-item-date {
             font-size: 14px;
             letter-spacing: -0.5px;

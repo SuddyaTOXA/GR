@@ -4501,6 +4501,81 @@ a.banner-link {
   .runs-desc-box .content * {
     color: #737c84; }
 
+.section-fuel-products {
+  padding-top: 96px;
+  padding-bottom: 108px;
+  background-position: left bottom;
+  background-size: contain;
+  background-repeat: no-repeat; }
+  .section-fuel-products .section-title {
+    margin-bottom: 88px; }
+
+.fuel-products-list {
+  max-width: 1070px;
+  margin: 0 auto -25px; }
+  .fuel-products-list > li {
+    display: inline-block;
+    width: 49%;
+    padding: 0 7px;
+    margin-bottom: 25px;
+    vertical-align: top; }
+
+.fuel-product-box {
+  overflow: hidden;
+  padding: 24px 20px 17px 20px;
+  background-color: #fff;
+  border: 1px solid #ECF0F3;
+  -webkit-box-shadow: 0 0 20px rgba(0, 0, 0, 0.05);
+  -khtml-box-shadow: 0 0 20px rgba(0, 0, 0, 0.05);
+  -moz-box-shadow: 0 0 20px rgba(0, 0, 0, 0.05);
+  -ms-box-shadow: 0 0 20px rgba(0, 0, 0, 0.05);
+  -o-box-shadow: 0 0 20px rgba(0, 0, 0, 0.05);
+  box-shadow: 0 0 20px rgba(0, 0, 0, 0.05); }
+
+.fuel-product-img-wrap {
+  float: left;
+  min-height: 105px;
+  margin-right: 19px;
+  line-height: 105px; }
+  .fuel-product-img-wrap img {
+    max-width: 100%;
+    height: auto;
+    vertical-align: middle; }
+
+.fuel-product-desc-box .content {
+  overflow: hidden; }
+  .fuel-product-desc-box .content * {
+    font-family: "proximanova-light", Arial, sans-serif;
+    font-weight: 300;
+    color: #737c84; }
+  .fuel-product-desc-box .content ul li, .fuel-product-desc-box .content ol li {
+    position: relative;
+    margin-bottom: 0;
+    list-style: none;
+    list-style-position: inside;
+    text-indent: 10px; }
+    .fuel-product-desc-box .content ul li:before, .fuel-product-desc-box .content ol li:before {
+      position: absolute;
+      content: '';
+      width: 4px;
+      height: 4px;
+      background-color: #737c84;
+      left: 0;
+      top: 9px;
+      -webkit-border-radius: 50%;
+      -khtml-border-radius: 50%;
+      -moz-border-radius: 50%;
+      -ms-border-radius: 50%;
+      -o-border-radius: 50%;
+      border-radius: 50%; }
+
+.fuel-product-title {
+  margin-bottom: 8px;
+  font-family: "proximanova-semibold", Arial, sans-serif;
+  font-size: 1.125em;
+  font-weight: 500;
+  color: #fb7e22; }
+
 .swiper-container {
   width: 100%;
   /*height: 300px;*/
@@ -4548,6 +4623,7 @@ a.banner-link {
   margin-bottom: 10px;
   position: relative;
   overflow: hidden;
+  z-index: 10;
   -webkit-transition: all 0.5s ease;
   -moz-transition: all 0.5s ease;
   -o-transition: all 0.5s ease;

@@ -1,3 +1,28 @@
+function setMaxHeight(box) {
+    var maxHeight = 0;
+    box.each(function () {
+        if ( jQuery(this).height() > maxHeight ) {
+            maxHeight = jQuery(this).height();
+        }
+    });
+    box.height(maxHeight);
+}
+
+function setMaxOuterHeight(box) {
+    var maxHeight = 0;
+    box.each(function () {
+        if ( jQuery(this).outerHeight() > maxHeight ) {
+            maxHeight = jQuery(this).outerHeight();
+        }
+    });
+    box.outerHeight(maxHeight);
+}
+
+
+    var boxTitle = jQuery('.watch-title-wrap');
+    setMaxHeight(boxTitle);
+
+
 jQuery(document).ready(function($) {
 
 	// header fade
@@ -19,7 +44,10 @@ jQuery(document).ready(function($) {
             header.removeClass('scrolling');
         }
 	});
-
+    $(window).on('load resize', function() {
+        var fuelBox = $('.fuel-product-box');
+        setMaxOuterHeight(fuelBox);
+    });
     // for smooth scroll
     smoothScroll.init({
         selector: '.smooth-scroll, a', // Selector for links (must be a class, ID, data attribute, or element tag)

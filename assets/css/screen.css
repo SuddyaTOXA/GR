@@ -5043,7 +5043,10 @@ a.banner-link {
     margin-left: -15px;
     margin-right: -15px; }
     .directors-list > li {
-      padding: 0 15px; } }
+      padding: 0 15px; }
+
+  .wp-pagenavi {
+    padding-right: 40px; } }
 @media all and (max-width: 860px) {
   .section-page-banner.has-video-btn a.btn-play,
   .section-page-banner.has-video-btn .btn-play {
@@ -5065,7 +5068,10 @@ a.banner-link {
       left: -120px; }
 
   .history-year-wrap {
-    right: -115px; } }
+    right: -115px; }
+
+  .news-item-desc {
+    padding: 12px 10px 18px; } }
 @media all and (max-width: 790px) {
   .wrapper {
     margin-bottom: -177px; }
@@ -5216,6 +5222,9 @@ a.banner-link {
         width: 100%;
         left: 11px;
         right: auto; } }
+@media all and (max-width: 767px) {
+  .news-list > li {
+    width: 49%; } }
 @media all and (max-width: 680px) {
   .new-img-wrap {
     float: none;
@@ -5235,7 +5244,16 @@ a.banner-link {
   .section-class .tab-left-block {
     padding-left: 30px; }
     .section-class .tab-left-block:not(:last-child) {
-      margin-bottom: 40px; } }
+      margin-bottom: 40px; }
+
+  .wp-pagenavi {
+    float: none;
+    text-align: center;
+    padding-right: 0; }
+    .wp-pagenavi > * {
+      display: inline-block;
+      padding-top: 5px;
+      padding-bottom: 5px; } }
 @media all and (max-width: 640px) {
   .container {
     padding: 0 10px; }
@@ -5298,7 +5316,14 @@ a.banner-link {
     width: 100%; }
 
   .directors-list > li {
-    width: 49%; } }
+    width: 49%; }
+
+  .news-list > li {
+    width: 100%;
+    margin-bottom: 50px; }
+
+  .section-news {
+    padding-bottom: 82px; } }
 @media all and (max-width: 480px) {
   body.home .wrapper {
     padding-top: 65px; }

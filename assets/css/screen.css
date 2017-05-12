@@ -5071,7 +5071,20 @@ a.banner-link {
     right: -115px; }
 
   .news-item-desc {
-    padding: 12px 10px 18px; } }
+    padding: 12px 10px 18px; }
+
+  .section-news {
+    padding-top: 95px;
+    padding-bottom: 100px; }
+
+  .wp-pagenavi {
+    float: none;
+    text-align: center;
+    padding-right: 0; }
+    .wp-pagenavi > * {
+      display: inline-block;
+      padding-top: 5px;
+      padding-bottom: 5px; } }
 @media all and (max-width: 790px) {
   .wrapper {
     margin-bottom: -177px; }
@@ -5244,16 +5257,7 @@ a.banner-link {
   .section-class .tab-left-block {
     padding-left: 30px; }
     .section-class .tab-left-block:not(:last-child) {
-      margin-bottom: 40px; }
-
-  .wp-pagenavi {
-    float: none;
-    text-align: center;
-    padding-right: 0; }
-    .wp-pagenavi > * {
-      display: inline-block;
-      padding-top: 5px;
-      padding-bottom: 5px; } }
+      margin-bottom: 40px; } }
 @media all and (max-width: 640px) {
   .container {
     padding: 0 10px; }
@@ -5323,7 +5327,8 @@ a.banner-link {
     margin-bottom: 50px; }
 
   .section-news {
-    padding-bottom: 82px; } }
+    padding-top: 70px;
+    padding-bottom: 70px; } }
 @media all and (max-width: 480px) {
   body.home .wrapper {
     padding-top: 65px; }

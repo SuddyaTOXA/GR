@@ -110,7 +110,40 @@
 }
 
 @media all and (max-width: 960px) {
-
+    .runs-list {
+        position: relative;
+        &:after {
+            position: absolute;
+            z-index: 1;
+            content: '';
+            width: 4px;
+            height: 100%;
+            background-color: #f4f4f4;
+            left: 50%;
+            margin-left: -2px;
+            top: 0;
+        }
+        > li {
+            width: 100%;
+            margin-bottom: 100px;
+            &:after {
+                content: none;
+            }
+            &:last-child {
+                margin-bottom: 0;
+            }
+        }
+    }
+    .runs-img-wrap {
+        z-index: 12;
+        margin-bottom: 0;
+    }
+    .runs-desc-box {
+        position: relative;
+        z-index: 10;
+        padding-top: 16px;
+        background-color: #ffffff;
+    }
 }
 
 @media all and (max-width: 860px) {
@@ -145,6 +178,14 @@
     .news-item-desc {
         padding: 12px 10px 18px;
     }
+    .fuel-products-list {
+        > li {
+            width: 100%;
+        }
+    }
+    .fuel-product-box {
+        height: auto !important;
+    }
     .section-news {
         padding-top: 95px;
         padding-bottom: 100px;
@@ -160,6 +201,7 @@
         }
     }
 }
+
 
 @media all and (max-width: 790px) {
     .wrapper {
@@ -560,6 +602,12 @@
                 margin: 0 10px;
             }
         }
+    }
+    .fuel-product-img-wrap {
+        float: none;
+        text-align: center;
+        min-height: 105px;
+        margin-right: 0;
     }
 }
 

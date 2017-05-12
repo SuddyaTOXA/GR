@@ -141,7 +141,9 @@
               right: auto;
               left: -169px;
               padding: 14px 35px 14px 20px;
-              background-image: url(../../img/shape_r.png);
+                &:after {
+                  @include css3-prefix('transform', 'rotate(180deg)');
+                }
               }
           }
           &:nth-child(2) {
@@ -160,7 +162,8 @@
               max-width: 388px;
             }
             .history-img-wrap {
-              margin-bottom: 6px;
+              background-color: #F6F8F7;
+              padding-bottom: 6px;
               max-width: 388px;
               img {
                 max-width: 100%;
@@ -168,6 +171,7 @@
               }
             }
             .history-desc {
+              background-color: #F6F8F7;
               .content {
                 font-family: $font-light;
                 font-weight: 300;
@@ -183,17 +187,28 @@
         padding: 14px 20px 14px 35px;
         color: #ffffff;
         text-align: center;
-        background-image: url(../../img/shape_l.png);
-        background-repeat: no-repeat;
-        background-position: center;
-        background-size: contain;
         -moz-transform: translate(0, -50%);
         -ms-transform: translate(0, -50%);
         -webkit-transform: translate(0, -50%);
         -o-transform: translate(0, -50%);
         transform: translate(0, -50%);
+        &:after {
+          position: absolute;
+          z-index: 99;
+          content: '';
+          width: 100%;
+          height: 100%;
+          left: 0;
+          top: 0;
+          background-image: url(../../img/shape_l.png);
+          background-repeat: no-repeat;
+          background-position: center;
+          background-size: contain;
+        }
       }
         .year-wrap {
+          position: relative;
+          z-index: 100;
           display: table;
           width: 100%;
           height: 100%;

@@ -45,7 +45,7 @@ jQuery(document).ready(function($) {
         }
 	});
     $(window).on('load resize', function() {
-        var fuelBox = $('.fuel-product-box');
+        var fuelBox = $('.fuel-product-desc-box');
         setMaxOuterHeight(fuelBox);
     });
     // for smooth scroll

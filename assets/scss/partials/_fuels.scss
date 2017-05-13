@@ -16,6 +16,7 @@
     text-align: center;
     > li {
       position: relative;
+      z-index: 10;
       display: inline-block;
       width: 32%;
       padding: 0 15px;

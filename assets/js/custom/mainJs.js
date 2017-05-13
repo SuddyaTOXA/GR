@@ -15,7 +15,7 @@ function setMaxOuterHeight(box) {
             maxHeight = jQuery(this).outerHeight();
         }
     });
-    box.outerHeight(maxHeight);
+
 }
 
 
@@ -45,8 +45,21 @@ jQuery(document).ready(function($) {
         }
 	});
     $(window).on('load resize', function() {
-        var fuelBox = $('.fuel-product-desc-box');
-        setMaxOuterHeight(fuelBox);
+        var fuelBox = $('.fuel-product-desc-box'),
+            box = fuelBox.parent();
+
+        if ($(window).width() > 860) {
+            var maxHeight = 0;
+            fuelBox.each(function () {
+                if ($(this).outerHeight() > maxHeight) {
+                    maxHeight = $(this).outerHeight();
+                }
+            });
+            box.height(maxHeight);
+            console.log(maxHeight);
+        } else {
+            box.css('height', '');
+        }
     });
     // for smooth scroll
     smoothScroll.init({

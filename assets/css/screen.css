@@ -5303,7 +5303,14 @@ a.banner-link {
         right: auto; } }
 @media all and (max-width: 767px) {
   .news-list > li {
-    width: 49%; } }
+    width: 49%; }
+
+  .section-map-description {
+    display: block;
+    width: 100%;
+    max-width: calc(100% - 40px);
+    top: 20px;
+    text-align: center; } }
 @media all and (max-width: 680px) {
   .new-img-wrap {
     float: none;

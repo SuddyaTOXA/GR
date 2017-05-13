@@ -19,8 +19,8 @@ function setMaxOuterHeight(box) {
 }
 
 
-    var boxTitle = jQuery('.watch-title-wrap');
-    setMaxHeight(boxTitle);
+var boxTitle = jQuery('.watch-title-wrap');
+setMaxHeight(boxTitle);
 
 
 jQuery(document).ready(function($) {
@@ -56,7 +56,6 @@ jQuery(document).ready(function($) {
                 }
             });
             box.height(maxHeight);
-            console.log(maxHeight);
         } else {
             box.css('height', '');
         }
@@ -153,7 +152,6 @@ jQuery(document).ready(function($) {
             autoplay: 7000,
             effect: 'fade',
             onInit: function (swiper) {
-                console.log("initialized");
                 $('.gallery-top').addClass('started');
 
                 var slideList = $('.gallery-top').find('.swiper-slide');
@@ -164,10 +162,8 @@ jQuery(document).ready(function($) {
 
                         if (color == '#ffffff') {
                             header.addClass('white-header');
-                            console.log(color);
                         } else {
                             header.removeClass('white-header');
-                            console.log(color);
                         }
                     }
                 });
@@ -191,10 +187,8 @@ jQuery(document).ready(function($) {
 
                         if (color == '#ffffff') {
                             header.addClass('white-header');
-                            console.log(color);
                         } else {
                             header.removeClass('white-header');
-                            console.log(color);
                         }
                     }
                 });

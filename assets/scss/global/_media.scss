@@ -424,7 +424,7 @@
         width: calc(100% - 162px);
     }
     .section-class .tab-left-block {
-        padding-left: 30px;
+        padding-left: 10px;
         &:not(:last-child) {
             margin-bottom: 40px;
         }
@@ -587,9 +587,6 @@
         float: none;
         width: 100%;
     }
-    .section-class .tab-left-block {
-        padding-left: 30px;
-    }
 
     .video-slider {
         .swiper-slide {
@@ -641,7 +638,18 @@
 }
 
 @media all and (max-width: 360px) {
-
+    .section-class {
+        .tab-name-list {
+            margin: 0 0 20px;
+            > li {
+                display: block;
+                width: 100%;
+            }
+        }
+        .tab-left-block {
+            padding: 0 10px;
+        }
+    }
 }
 
 @media all and (max-width: 320px) {

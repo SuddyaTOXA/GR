@@ -5092,7 +5092,7 @@ a.banner-link {
       top: 0; }
     .runs-list > li {
       width: 100%;
-      margin-bottom: 100px; }
+      margin-bottom: 90px; }
       .runs-list > li:after {
         content: none; }
       .runs-list > li:last-child {
@@ -5106,6 +5106,7 @@ a.banner-link {
     position: relative;
     z-index: 10;
     padding-top: 16px;
+    padding-bottom: 10px;
     background-color: #ffffff; } }
 @media all and (max-width: 860px) {
   .section-page-banner.has-video-btn a.btn-play,
@@ -5489,7 +5490,8 @@ a.banner-link {
     float: none;
     text-align: center;
     min-height: 105px;
-    margin-right: 0; } }
+    margin-right: 0;
+    margin-bottom: 10px; } }
 @media all and (max-width: 420px) {
   .new-img-wrap {
     max-width: 100%; }
@@ -5501,5 +5503,8 @@ a.banner-link {
     margin-right: 0; }
     .directors-list > li {
       padding: 0 10px; } }
+@media all and (max-width: 320px) {
+  .directors-list > li {
+    width: 100%; } }
 
 /*# sourceMappingURL=screen.css.map */

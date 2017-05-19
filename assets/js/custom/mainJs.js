@@ -145,7 +145,7 @@ jQuery(document).ready(function($) {
     });
 
     // for modal
-    if ( $('a').is('.popup-vimeo')) {
+    if ( $('a.popup-vimeo').length ) {
         $('.popup-vimeo').magnificPopup({
             disableOn: 700,
             type: 'iframe',

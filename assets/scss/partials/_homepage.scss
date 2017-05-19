@@ -349,9 +349,11 @@ filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#ffba00', end
       position: relative;
       z-index: 20;
       font-family: "proximanova-bold", Arial, sans-serif;
-      font-size: 1.25em;
-      margin-bottom: 2px;
+      font-size: 1.5em;
+      // margin-bottom: 2px;
       color: #3f4548;
+      min-height: 108px;
+      margin-bottom: 40px;
     }
     .watch-block-sub-title {
       position: relative;

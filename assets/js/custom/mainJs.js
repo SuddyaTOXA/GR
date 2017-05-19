@@ -273,9 +273,14 @@ jQuery(document).ready(function($) {
         classToAdd: 'visible animated fadeInUpSmall',
         offset: 20
     });
-    $(".video-slider, .section-page-banner, .history-year-wrap, .directors-list, h2, h3:not(.tab-block-title), h4, .section-movable-systems p, .section-movable-systems img, .structure-box, .structure-list, .runs-list li, .news-list li").addClass("invisible").viewportChecker({
+    $(".video-slider, .section-page-banner, .history-year-wrap, .directors-list, h2, h3:not(.tab-block-title), h4, .section-movable-systems p, .section-movable-systems img, .structure-box, .structure-list, .runs-list li, .news-list li, .simple").addClass("invisible").viewportChecker({
         classToAdd: 'visible animated fadeIn',
         offset: 100
+    });
+
+    $(".reveal").viewportChecker({
+        classToAdd: 'visible animated fadeOut',
+        offset: 20
     });
 
 

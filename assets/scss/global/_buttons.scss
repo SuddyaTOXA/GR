@@ -126,6 +126,7 @@ a.btn:hover,
     }
     a.btn-technology,
     .btn-technology {
+        pointer-events: none;
         max-width: 272px;
         width: 100%;
         padding-bottom: 14px;

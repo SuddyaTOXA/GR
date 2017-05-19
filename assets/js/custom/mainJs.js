@@ -76,6 +76,25 @@ jQuery(document).ready(function($) {
         $(document.body).toggleClass('overflow');
     });
 
+    //drop-down menu
+    // $('.btn-group').click(function() {
+    //     var menuShow = $(this).find('.drop-down-list'),
+    //         menuBtn = $(this).find('.drop-down-btn');
+    //
+    //     menuBtn.toggleClass('active');
+    //     menuShow.slideToggle(500);
+    // });
+
+    $('.btn-group').hover(
+        function() {
+            $(this).find('.drop-down-btn').addClass('active');
+            $(this).find('.drop-down-list').slideDown(500);
+        }, function() {
+            $(this).find('.drop-down-btn').removeClass('active');
+            $(this).find('.drop-down-list').slideUp(500);
+        }
+    );
+
     //for banner link
     $('.banner-list li').on('click', function () {
         var tab = $(this).data('tabId'),
@@ -257,7 +276,7 @@ jQuery(document).ready(function($) {
         offset: 100
     });
 
-    $(".section-title, .btn, .banner-title, .history-img-wrap, .history-desc, .technology-list li, .tab-name-list li, .tab-content-list li:first-child .specifications-list > li, .tab-content-list li:first-child p, .tab-content-list li:first-child .tab-block-title, .section-structure img, .fuel-product-box").addClass("invisible").viewportChecker({
+    $(".section-title, .btn, .btn-group, .banner-title, .history-img-wrap, .history-desc, .technology-list li, .tab-name-list li, .tab-content-list li:first-child .specifications-list > li, .tab-content-list li:first-child p, .tab-content-list li:first-child .tab-block-title, .section-structure img, .fuel-product-box").addClass("invisible").viewportChecker({
         classToAdd: 'visible animated fadeInUpSmall',
         offset: 100
     });

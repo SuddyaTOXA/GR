@@ -203,9 +203,8 @@ $complexContainerHeight: 1162;
     position: absolute;
     width: 10%;
     height: 4%;
-    background-color: #333;
-    top: 0%;
-    left: 0%;
+    top: 0;
+    left: 0;
     background: #f8f8f8;
     // opacity: 0.8 !important;
   }
@@ -309,28 +308,42 @@ $complexContainerHeight: 1162;
   .container {
     height: 100%;
   }
-    a.btn-only-play,
-    .btn-only-play {
-      &.pause {
-        &:after {
-          content: none;
-        }
-        &:before {
-          content: '\f04c';
-          position: absolute;
-          right: 50%;
-          top: 50%;
-          margin-top: -12px;
-          margin-right: -9px ;
-          font-family: FontAwesome;
-          font-size: 20px;
-          text-rendering: auto;
-          -webkit-font-smoothing: antialiased;
-          -moz-osx-font-smoothing: grayscale;
-          color: #000;
-        }
+  a.btn-only-play,
+  .btn-only-play {
+    @include transition('all 1s ease-in-out 0.1s');
+    &.pause {
+      &:after {
+        content: none;
+      }
+      &:before {
+        content: '\f04c';
+        position: absolute;
+        right: 50%;
+        top: 50%;
+        margin-top: -12px;
+        margin-right: -9px ;
+        font-family: FontAwesome;
+        font-size: 20px;
+        text-rendering: auto;
+        -webkit-font-smoothing: antialiased;
+        -moz-osx-font-smoothing: grayscale;
+        color: #000;
       }
     }
+  }
+  &.video-active {
+    .container {
+      position: static;
+    }
+    .btn-only-play {
+      position: absolute;
+      z-index: 10;
+      left: 30px;
+      bottom: 30px;
+      width: 60px;
+      height: 60px;
+    }
+  }
 }
 
 .watch-bg-video-box {

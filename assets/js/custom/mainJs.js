@@ -282,7 +282,7 @@ jQuery(document).ready(function($) {
         $this.css({'position' : 'absolute'}).animate({
             "left": "30px",
             "bottom": "30px"
-        }, 1000);
+        }, 1000, 'easeOutSine');
         // watchSection.find('.watch-wrap').children().not('.btn').addClass("invisible fadeOut");
         if (firstCall === true) {
             console.log(firstCall);

@@ -269,12 +269,27 @@ jQuery(document).ready(function($) {
     $('.btn-only-play').on('click', function () {
         var watchSection = $(this).closest('.section-watch'),
             videoBox     = watchSection.find('.watch-bg-video-box'),
-            video        = videoBox.find('video').get(0);
+            videoHeight = videoBox.find('video'),
+            video        = videoHeight.get(0);
 
         videoBox.show();
-        watchSection.height(videoBox.height());
+        videoHeight.css('height', 'auto');
+        watchSection.height(videoHeight.height());
+        $(window).on('load resize', function() {
+            watchSection.height(videoHeight.height());
+        });
         enableInlineVideo(video);
-        setTimeout(function () { video.play(); }, 200);
+        setTimeout(function () {
+            if (video.paused) {
+                video.play();
+                console.log('play');
+                $('.section-watch').find('.btn-only-play').addClass('pause');
+            } else {
+                video.pause();
+                console.log('pause');
+                $('.section-watch').find('.btn-only-play').removeClass('pause');
+            }
+            }, 200);
     });
 
 

@@ -299,8 +299,9 @@
         }
     }
     .section-watch {
+           // min-height: auto !important;
         .container {
-            min-height: auto;
+           // min-height: auto;
         }
         .watch-wrap {
             padding: 40px 0;

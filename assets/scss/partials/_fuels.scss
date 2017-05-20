@@ -304,9 +304,33 @@ $complexContainerHeight: 1162;
 }
 .section-watch {
   position: relative;
+  min-height: 410px !important;
+  @include transition(0.35s);
   .container {
     height: 100%;
   }
+    a.btn-only-play,
+    .btn-only-play {
+      &.pause {
+        &:after {
+          content: none;
+        }
+        &:before {
+          content: '\f04c';
+          position: absolute;
+          right: 50%;
+          top: 50%;
+          margin-top: -12px;
+          margin-right: -9px ;
+          font-family: FontAwesome;
+          font-size: 20px;
+          text-rendering: auto;
+          -webkit-font-smoothing: antialiased;
+          -moz-osx-font-smoothing: grayscale;
+          color: #000;
+        }
+      }
+    }
 }
 
 .watch-bg-video-box {
@@ -316,7 +340,7 @@ $complexContainerHeight: 1162;
   display: table;
   width: 100%;
   min-height: 200px;
-  height: auto;
+  height: 100%;
   text-align: center;
   background-color: #000000;
 }
@@ -328,7 +352,8 @@ $complexContainerHeight: 1162;
       margin: 0 auto;
       display: block;
       width: 100%;
-      height: auto;
+      height: 0;
       //max-height: calc(100vh - 90px);
+      @include transition(0.35s);
     }
   }

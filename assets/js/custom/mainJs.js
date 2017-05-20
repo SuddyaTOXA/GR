@@ -279,7 +279,7 @@ jQuery(document).ready(function($) {
         videoBox.show();
         videoTag.css('height', 'auto');
         watchSection.addClass('video-active').height(videoTag.height());
-        // watchSection.find('.watch-wrap').children().not('.btn').addClass("invisible fadeOut");
+        watchSection.find('.watch-wrap').children().not('.btn').addClass("invisible fadeOut");
         if (firstCall === true) {
             console.log(firstCall);
             $('html, body').animate({
@@ -299,13 +299,13 @@ jQuery(document).ready(function($) {
                 video.pause();
                 $this.removeClass('pause');
             }
-        }, 200);
+        }, 50);
         setTimeout(function () {
             $this.css({'position' : 'absolute'}).animate({
                 "left": "30px",
                 "bottom": "30px"
-            }, 1000, 'easeOutSine');
-        }, 1000);
+            }, 1000, 'easeInQuart');
+        }, 250);
     });
 
 

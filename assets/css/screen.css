@@ -4873,6 +4873,32 @@ a.banner-link {
     width: 5.28903%;
     height: 46.87487%; }
 
+.section-watch {
+  position: relative; }
+  .section-watch .container {
+    height: 100%; }
+
+.watch-bg-video-box {
+  position: absolute;
+  top: 0;
+  left: 0;
+  display: table;
+  width: 100%;
+  min-height: 200px;
+  height: auto;
+  text-align: center;
+  background-color: #000000; }
+
+.watch-bg-video {
+  display: table-cell;
+  min-height: 100px;
+  vertical-align: middle; }
+  .watch-bg-video video {
+    margin: 0 auto;
+    display: block;
+    width: 100%;
+    height: auto; }
+
 .swiper-container {
   width: 100%;
   /*height: 300px;*/

@@ -302,3 +302,33 @@ $complexContainerHeight: 1162;
     //@include revealPosition(top, left, width, height, $complexContainerWidth, $complexContainerHeight );
   }
 }
+.section-watch {
+  position: relative;
+  .container {
+    height: 100%;
+  }
+}
+
+.watch-bg-video-box {
+  position: absolute;
+  top: 0;
+  left: 0;
+  display: table;
+  width: 100%;
+  min-height: 200px;
+  height: auto;
+  text-align: center;
+  background-color: #000000;
+}
+  .watch-bg-video {
+    display: table-cell;
+    min-height: 100px;
+    vertical-align: middle;
+    video {
+      margin: 0 auto;
+      display: block;
+      width: 100%;
+      height: auto;
+      //max-height: calc(100vh - 90px);
+    }
+  }

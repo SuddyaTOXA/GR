@@ -270,6 +270,24 @@ jQuery(document).ready(function($) {
         });
     });
 
+    // for empty links
+    $('.prevent').on('click', function(event){
+        event.preventDefault();
+    });
+
+    //for watch video section
+    $('.btn-only-play').on('click', function () {
+        var watchSection = $(this).parents('.section-watch'),
+            videoBox = watchSection.find('.watch-bg-video-box'),
+            video = videoBox.find('video').get(0);
+
+        videoBox.show();
+        watchSection.height(videoBox.height());
+        enableInlineVideo(video);
+        setTimeout(function () { video.play(); }, 200);
+    });
+
+
     /*viewportchecker to trigger animations throughout*/
     $(".news-box").addClass("invisible").viewportChecker({
         classToAdd: 'visible animated slideInRight',

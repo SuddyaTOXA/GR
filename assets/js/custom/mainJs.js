@@ -205,10 +205,11 @@ jQuery(document).ready(function($) {
         });
     }
 
-    if ( $('div').is('.news-slider') ) {
+    if ( $('.news-slider').length ) {
         var swiper = new Swiper('.news-slider', {
             pagination: '.swiper-pagination',
             slidesPerView: 'auto',
+            autoplay: 8000,
             centeredSlides: true,
             paginationClickable: true,
             loop: true,
@@ -299,7 +300,7 @@ jQuery(document).ready(function($) {
         offset: 100
     });
 
-    $(".section-title, .btn, .btn-group, .banner-title, .history-img-wrap, .history-desc, .technology-list li, .tab-name-list li, .tab-content-list li:first-child .specifications-list > li, .tab-content-list li:first-child p, .tab-content-list li:first-child .tab-block-title, .section-structure img, .fuel-product-box").addClass("invisible").viewportChecker({
+    $(".section-title, .btn, .banner-title, .history-img-wrap, .history-desc, .technology-list li, .tab-name-list li, .tab-content-list li:first-child .specifications-list > li, .tab-content-list li:first-child p, .tab-content-list li:first-child .tab-block-title, .section-structure img, .fuel-product-box").addClass("invisible").viewportChecker({
         classToAdd: 'visible animated fadeInUpSmall',
         offset: 100
     });

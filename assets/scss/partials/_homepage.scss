@@ -348,7 +348,7 @@ filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#ffba00', end
     .watch-block-title {
       position: relative;
       z-index: 20;
-      font-family: "proximanova-bold", Arial, sans-serif;
+      font-family: "proximanova-light", Arial, sans-serif;
       font-size: 1.5em;
       // margin-bottom: 2px;
       color: #3f4548;
@@ -372,7 +372,8 @@ filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#ffba00', end
       height: 100%;
       right: 0;
       bottom: 0;
-      max-width: 150px;
+      // max-width: 150px;
+      max-width: 110px;
       max-height: 180px;
       background-size: contain;
       background-position: right bottom;

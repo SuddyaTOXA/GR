@@ -3152,7 +3152,7 @@ a.btn-download,
   .admin-bar .header {
     top: 32px; }
   .header.show {
-    opacity: 1; }
+    opacity: 0.8; }
 
 .header:after {
   content: '';
@@ -3870,7 +3870,7 @@ a.banner-link {
       left: 0;
       top: 50%;
       background-position: center;
-      background-size: cover;
+      background-size: 100% auto;
       background-repeat: no-repeat; }
     .specifications-list > li:last-child {
       margin-bottom: 0; }
@@ -3886,11 +3886,11 @@ a.banner-link {
       left: 3px;
       margin-top: -11px;
       background-image: url(../../img/input-icon.png); }
-    .specifications-list > li.flue-icon:after {
-      width: 15px;
-      height: 19px;
+    .specifications-list > li.fuel-icon:after {
+      width: 20px;
+      height: 20px;
       margin-top: -9px;
-      background-image: url(../../img/fuel-icon.png); }
+      background-image: url(../../img/icon-fuel-production.png); }
 
 .technology-list {
   overflow: hidden;
@@ -4099,7 +4099,7 @@ a.banner-link {
     max-width: 1040px;
     font-family: "proximanova-light", Arial, sans-serif;
     font-weight: 300;
-    font-size: 1.125em;
+    font-size: 1.15em;
     color: #555c62; }
     .section-info .content > * {
       margin-bottom: 25px; }
@@ -4131,10 +4131,10 @@ a.banner-link {
     vertical-align: top; }
 
 .director-img-wrap {
-  margin: 0 auto 10px;
-  max-width: 195px; }
+  margin: 0 auto 10px; }
   .director-img-wrap img {
     max-width: 100%;
+    width: 100%;
     height: auto; }
 
 .director-desc .content {
@@ -4446,6 +4446,13 @@ a.banner-link {
   -ms-box-shadow: 0 1px 15px rgba(0, 0, 0, 0.2);
   -o-box-shadow: 0 1px 15px rgba(0, 0, 0, 0.2);
   box-shadow: 0 1px 15px rgba(0, 0, 0, 0.2); }
+  .active + .drop-down-list {
+    -webkit-border-radius: 0 0 3px 3px;
+    -khtml-border-radius: 0 0 3px 3px;
+    -moz-border-radius: 0 0 3px 3px;
+    -ms-border-radius: 0 0 3px 3px;
+    -o-border-radius: 0 0 3px 3px;
+    border-radius: 0 0 3px 3px; }
   .drop-down-list > li > a,
   .drop-down-list > li > span {
     display: block;
@@ -5203,7 +5210,7 @@ a.banner-link {
 .watch-block-title {
   position: relative;
   z-index: 20;
-  font-family: "proximanova-bold", Arial, sans-serif;
+  font-family: "proximanova-light", Arial, sans-serif;
   font-size: 1.5em;
   color: #3f4548;
   min-height: 108px;
@@ -5226,7 +5233,7 @@ a.banner-link {
   height: 100%;
   right: 0;
   bottom: 0;
-  max-width: 150px;
+  max-width: 110px;
   max-height: 180px;
   background-size: contain;
   background-position: right bottom;

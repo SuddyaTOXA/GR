@@ -16,7 +16,7 @@
     max-width: 1040px;
     font-family: $font-light;
     font-weight: 300;
-    font-size: 1.125em;
+    font-size: 1.15em;
     color: #555c62;
     > * {
       margin-bottom: 25px;
@@ -57,9 +57,10 @@
   }
     .director-img-wrap {
       margin: 0 auto 10px;
-      max-width: 195px;
+      // max-width: 195px;
       img {
         max-width: 100%;
+        width: 100%;
         height: auto;
       }
     }
@@ -376,6 +377,9 @@
       padding: 3px 0 6px;
       background-color: rgba(251,126,34,.5);
       @include css3-prefix('box-shadow', '0 1px 15px rgba(0, 0, 0, 0.2)');
+      .active + & {
+        @include border-radius(0 0 3px 3px);
+      }
       > li {
         > a,
         > span {

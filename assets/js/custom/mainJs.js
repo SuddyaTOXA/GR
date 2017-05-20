@@ -279,6 +279,10 @@ jQuery(document).ready(function($) {
         videoBox.show();
         videoTag.css('height', 'auto');
         watchSection.addClass('video-active').height(videoTag.height());
+        $this.css({'position' : 'absolute'}).animate({
+            "left": "30px",
+            "bottom": "30px"
+        }, 1000);
         // watchSection.find('.watch-wrap').children().not('.btn').addClass("invisible fadeOut");
         if (firstCall === true) {
             console.log(firstCall);

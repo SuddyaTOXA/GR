@@ -310,7 +310,7 @@ $complexContainerHeight: 1162;
   }
   a.btn-only-play,
   .btn-only-play {
-    @include transition('all 1s ease-in-out 0.1s');
+    //@include transition('all 1s ease-in-out 0.1s');
     &.pause {
       &:after {
         content: none;
@@ -336,10 +336,10 @@ $complexContainerHeight: 1162;
       position: static;
     }
     .btn-only-play {
-      position: absolute;
+      //position: absolute;
       z-index: 10;
-      left: 30px;
-      bottom: 30px;
+      //left: 30px;
+      //bottom: 30px;
       width: 60px;
       height: 60px;
     }

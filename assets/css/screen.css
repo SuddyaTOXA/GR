@@ -4890,38 +4890,27 @@ a.banner-link {
   transition: 0.35s; }
   .section-watch .container {
     height: 100%; }
-  .section-watch a.btn-only-play,
-  .section-watch .btn-only-play {
-    -webkit-transition: all 1s ease-in-out 0.1s;
-    -khtml-transition: all 1s ease-in-out 0.1s;
-    -moz-transition: all 1s ease-in-out 0.1s;
-    -ms-transition: all 1s ease-in-out 0.1s;
-    -o-transition: all 1s ease-in-out 0.1s;
-    transition: all 1s ease-in-out 0.1s; }
-    .section-watch a.btn-only-play.pause:after,
-    .section-watch .btn-only-play.pause:after {
-      content: none; }
-    .section-watch a.btn-only-play.pause:before,
-    .section-watch .btn-only-play.pause:before {
-      content: '\f04c';
-      position: absolute;
-      right: 50%;
-      top: 50%;
-      margin-top: -12px;
-      margin-right: -9px;
-      font-family: FontAwesome;
-      font-size: 20px;
-      text-rendering: auto;
-      -webkit-font-smoothing: antialiased;
-      -moz-osx-font-smoothing: grayscale;
-      color: #000; }
+  .section-watch a.btn-only-play.pause:after,
+  .section-watch .btn-only-play.pause:after {
+    content: none; }
+  .section-watch a.btn-only-play.pause:before,
+  .section-watch .btn-only-play.pause:before {
+    content: '\f04c';
+    position: absolute;
+    right: 50%;
+    top: 50%;
+    margin-top: -12px;
+    margin-right: -9px;
+    font-family: FontAwesome;
+    font-size: 20px;
+    text-rendering: auto;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    color: #000; }
   .section-watch.video-active .container {
     position: static; }
   .section-watch.video-active .btn-only-play {
-    position: absolute;
     z-index: 10;
-    left: 30px;
-    bottom: 30px;
     width: 60px;
     height: 60px; }
 

@@ -281,9 +281,8 @@ jQuery(document).ready(function($) {
         watchSection.addClass('video-active').height(videoTag.height());
         watchSection.find('.watch-wrap').children().not('.btn').addClass("invisible fadeOut");
         if (firstCall === true) {
-            console.log(firstCall);
             $('html, body').animate({
-                scrollTop: videoTag.offset().top
+                scrollTop: videoBox.offset().top - $('#header').outerHeight()
             }, duration);
             firstCall = false;
         }

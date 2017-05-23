@@ -147,10 +147,12 @@ jQuery(document).ready(function($) {
     }
 
     function stopVideo() {
-        var  slideList = $('.gallery-thumbs').find('.swiper-slide');
+        var  slideList = $('.gallery-top').find('.swiper-slide');
         // swiper-slide-active
         slideList.each(function (index) {
             $('video')[index].pause();
+            $('video')[index].currentTime = 0;
+
             console.log( index + " - STOP");
         });
     }

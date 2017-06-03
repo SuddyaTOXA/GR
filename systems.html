@@ -81,14 +81,14 @@
             <div class="container">
                 <div class="tab-block">
                     <ul class="tab-name-list">
-                        <li class="active" id="m-5">M-5</li>
-                        <li id="m-50">M-50</li>
+                        <li id="m-5">M-5</li>
+                        <li class="active"  id="m-50">M-50</li>
                         <li id="p-450">P-450</li>
                         <li id="p-2500">P-2500</li>
                         <li id="p-5000">P-5000</li>
                     </ul>
                     <ul class="tab-content-list">
-                        <li data-tab-id="m-5" class="show">
+                        <li data-tab-id="m-5">
                             <div class="tab-left-block">
                                 <h3 class="tab-block-title">M-5</h3>
                                 <div class="content">
@@ -104,14 +104,22 @@
                                 <!-- <a class="btn btn-download" href="#" download>Download brochure</a> keep in code, just disabled for now in Wordpress -->
                             </div>
                             <div class="tab-right-block">
-                                <img src="img/3d_image.png">
+                                <img src="img/m5/m5_frame00000.png" width="534" height="300"
+                                  class="reel"
+                                  id="image"
+                                  data-frames="30"
+                                  data-frame="8"
+                                  data-footage="5"
+                                  data-speed="0.3"
+                                  data-responsive="true"
+                                  data-images="img/m5/m5_frame#####.png|00000..00029">
                             </div>
                         </li>
-                        <li data-tab-id="m-50">
+                        <li data-tab-id="m-50" class="show">
                             <div class="tab-left-block">
                                 <h3 class="tab-block-title">M-50</h3>
                                 <div class="content">
-                                    <p>
+                                    <p> 
                                         Greyrock’s industry leading movable gas-to-liquids system processes flare gas, stranded gas, disadvantaged gas and NGLs (ethane, propane).  Units can be used in parallel to add capacity. 
 
                                     </p>
@@ -123,7 +131,15 @@
                                 <!-- <a class="btn btn-download" href="#" download>Download brochure</a> -->
                             </div>
                             <div class="tab-right-block">
-                                <img src="img/greyrock-test-3d-image2.png">
+                                <img src="img/m50_2/m50_frame00000.png" width="534" height="300"
+                                  class="reel"
+                                  id="image"
+                                  data-frames="24"
+                                  data-frame="8"
+                                  data-footage="5"
+                                  data-speed="0.3"
+                                  data-responsive="true"
+                                  data-images="img/m50_2/m50_frame#####.png|00000..00023">
                             </div>
                         </li>
                         <li data-tab-id="p-450">
@@ -143,6 +159,16 @@
                             </div>
                             <div class="tab-right-block">
                                 <!--<img src="img/3d_image.png">-->
+                                <img src="img/m50_2/m50_frame00000.png" width="534" height="300"
+                                  class="reel"
+                                  id="image"
+                                  data-frames="24"
+                                  data-frame="8"
+                                  data-footage="5"
+                                  data-speed="0.3"
+                                  data-responsive="true"
+                                  data-images="img/m50_2/m50_frame#####.png|00000..00023">
+                                  
                             </div>
                         </li>
                         <li data-tab-id="p-2500">
@@ -201,7 +227,7 @@
             </div>
             <div id="wathc-vi" class="watch-bg-video-box" style="display: none;">
                 <div class="watch-bg-video">
-                    <video class="watch-video" preload="auto" poster="" loop="">
+                    <video class="watch-video" preload="auto"  poster="" loop="">
                         <source src="video/What_is_Greyrock_HD.webm" type="video/webm">
                         <source src="video/What_is_Greyrock_HD.mp4" type="video/mp4">
                     </video>
@@ -421,6 +447,9 @@
 
     <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jqueryui/1.12.1/jquery-ui.js"></script>
+
+    <script src="assets/js/jquery.reel.js"></script>
+
     <script src="assets/js/iphone-inline-video.min.js"></script>
     <script src="assets/js/jquery.viewportchecker.min.js"></script>
     <script src="assets/js/smooth-scroll.min.js"></script>

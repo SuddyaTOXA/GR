@@ -120,7 +120,8 @@
             margin-bottom: 0;
             list-style: none;
             list-style-position: inside;
-            text-indent: 10px;
+            text-indent: 0px;
+            padding-left: 10px;
             &:before {
               position: absolute;
               content: '';
@@ -147,13 +148,34 @@
   background: #f8f8f8;
   padding-top: 96px;
   padding-bottom: 108px;
+  overflow: hidden;
 
   .section-title {
     margin-bottom: 44px;
   }
 
+  .complex-wrap,
+  .simple-wrap {
+      
+      @media(min-width: $screen-sm-min) {
+        display: inline-block;
+        width: $col *5;
+        vertical-align: middle;
+      }
+  }
   .versus {
     text-align: center;
+    
+    
+    margin-left: -8px;
+    margin-right: -8px;
+    
+
+    @media(min-width: $screen-sm-min) {
+      display: inline-block;
+      width: $col * 2;
+      vertical-align: middle;
+    }
 
     span {
       display: inline-block;

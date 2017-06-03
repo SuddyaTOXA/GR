@@ -1,0 +1,118 @@
+.input-style {
+    display: block;
+    width: 100%;
+    margin: 0;
+    min-height: 48px;
+    //line-height: 50px;
+    font-size: 16px;
+    font-family: $font-light;
+    border: 1px solid #E1E3E2;
+    @include border-radius(0);
+    padding: 6px 14px;
+    background-color: #FDFDFD;
+    @include transition($other-transition);
+    &:hover,
+    &:active,
+    &:focus {
+        //border-color: $color-text3;
+    }
+    &.wpcf7-not-valid,
+    &.error {
+        border-color: #ff0000;
+    }
+}
+textarea.input-style {
+    line-height: 1.5;
+    padding: 10px 12px;
+    min-height: 198px;
+    resize: none;
+}
+input::-webkit-input-placeholder {
+    font-size: 16px;
+    font-family: $font-light;
+    color: #abb3ba;
+
+}
+input::-moz-placeholder {
+    font-size: 16px;
+    font-family: $font-light;
+    color: #abb3ba;
+}
+input:-ms-input-placeholder {
+    font-size: 16px;
+    font-family: $font-light;
+    color: #abb3ba;
+
+}
+input:-moz-placeholder {
+    font-size: 16px;
+    font-family: $font-light;
+    color: #abb3ba;
+
+}
+
+textarea::-webkit-input-placeholder {
+    font-size: 16px;
+    font-family: $font-light;
+    color: #abb3ba;
+
+}
+textarea::-moz-placeholder {
+    font-size: 16px;
+    font-family: $font-light;
+    color: #abb3ba;
+
+}
+textarea:-ms-input-placeholder {
+    font-size: 16px;
+    font-family: $font-light;
+    color: #abb3ba;
+
+}
+textarea:-moz-placeholder {
+    font-size: 16px;
+    font-family: $font-light;
+    color: #abb3ba;
+
+}
+
+
+
+.select-wrap {
+    position:relative;
+    display: inline-block;
+    max-width: 100%;
+    width: 100%;
+    &:after {
+        content: '\f107';
+        position: absolute;
+        z-index: 100;
+        width: 30px;
+        height: 29px;
+        right: 1px;
+        top: 1px;
+        font: 34px FontAwesome;
+        color: #0097de;
+        text-align: center;
+        line-height: 30px;
+        background: #FBFBFB;
+        pointer-events: none;
+    }
+}
+select {
+    min-height: 48px;
+    width: 100%;
+    -webkit-appearance:none;
+    -moz-appearance:none;
+    appearance:none;
+    cursor:pointer;
+    //@include font(900, 26px, $font-heading, $line-height-heading);
+    border: 1px solid #E1E3E2;
+    @include border-radius(0);
+    letter-spacing: 0.8px;
+    background-color: #FBFBFB;
+    &:focus,
+    &:hover {
+      //  border-bottom: 2px solid $bg-color-blue;
+    }
+}

@@ -1,0 +1,54 @@
+.section-btn-group {
+  padding-top: 35px;
+  padding-bottom: 30px;
+  background-color: rgb(53, 57, 60);
+  .container {
+    max-width: 1080px;
+  }
+  a.btn, .btn {
+    min-width: 200px;
+  }
+  .drop-down-btn {
+    margin-top: 0;
+  }
+  .drop-down-list {
+    background-color: rgba(251, 126, 34, 0.9);
+  }
+}
+
+.btn-group-list {
+  margin: 0 -10px -20px;
+  > li {
+    display: inline-block;
+    width: 33%;
+    padding: 0 10px;
+    margin-bottom: 20px;
+    text-align: center;
+    &:first-child{
+      text-align: left;
+    }
+    &:last-child {
+      text-align: right;
+    }
+  }
+}
+
+.section-form {
+  padding-top: 40px;
+  padding-bottom: 40px;
+}
+  .form-box {
+    max-width: 900px;
+    margin: 0 auto;
+    padding: 20px 60px 40px;
+    @include css3-prefix('box-shadow', '0 1px 15px rgba(0, 0, 0, 0.1)');
+  }
+    .input-name {
+      display: block;
+      margin-bottom: 4px;
+      font-size: 12px;
+      font-family: $font-semibold;
+      color: #656f77;
+      text-transform: uppercase;
+
+    }

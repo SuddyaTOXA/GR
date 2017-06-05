@@ -82,7 +82,7 @@ textarea:-moz-placeholder {
     display: inline-block;
     max-width: 100%;
     width: 100%;
-    @include css3-prefix('box-shadow', '0 1px 15px rgba(0, 0, 0, 0.1)');
+    @include css3-prefix('box-shadow', '0 1px 5px rgba(0, 0, 0, 0.1)');
     &:before {
         position: absolute;
         content: '';

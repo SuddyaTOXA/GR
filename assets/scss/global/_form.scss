@@ -129,7 +129,7 @@ select {
     option {
         font-family: $font-light;
         color: #656f77;
-        &:checked {
+        &:disabled {
             color: #abb3ba;;
         }
     }

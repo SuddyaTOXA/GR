@@ -149,17 +149,6 @@
         padding-bottom: 10px;
         background-color: #ffffff;
     }
-    .btn-group-list {
-        > li {
-            width: 32%;
-            &:last-child {
-                width: 32%;
-            }
-            &:first-child {
-                width: 32%;
-            }
-        }
-    }
 }
 
 @media all and (max-width: 860px) {
@@ -447,20 +436,6 @@
     .custom-marker {
         font-size: 18px;
     }
-    .btn-group-list {
-        > li {
-            width: 49%;
-            text-align: left;
-            &:last-child {
-                width: 49%;
-                text-align: left;
-            }
-            &:first-child {
-                width: 49%;
-                text-align: left;
-            }
-        }
-    }
 }
 @media all and (max-width: 680px) {
     .new-img-wrap {
@@ -485,6 +460,20 @@
         padding-left: 10px;
         &:not(:last-child) {
             margin-bottom: 40px;
+        }
+    }
+    .btn-group-list {
+        > li {
+            width: 100%;
+            text-align: center;
+            &:last-child {
+                width: 100%;
+                text-align: center;
+            }
+            &:first-child {
+                width: 100%;
+                text-align: center;
+            }
         }
     }
 }

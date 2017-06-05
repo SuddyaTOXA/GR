@@ -31,18 +31,17 @@
 
 .btn-group-list {
   margin: 0 -10px -20px;
+  overflow: hidden;
   > li {
-    display: inline-block;
-    width: 33%;
+    float: left;
+    width: 33.333%;
     padding: 0 10px;
     margin-bottom: 20px;
     text-align: center;
     &:first-child{
-      width: 33%;
       text-align: left;
     }
     &:last-child {
-      width: 33%;
       text-align: right;
     }
   }

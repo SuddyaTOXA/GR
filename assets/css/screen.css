@@ -3268,7 +3268,7 @@ select {
   select option {
     font-family: "proximanova-light", Arial, sans-serif;
     color: #656f77; }
-    select option:checked {
+    select option:disabled {
       color: #abb3ba; }
 
 .header {
@@ -5137,18 +5137,17 @@ a.banner-link {
     background-color: rgba(251, 126, 34, 0.9); }
 
 .btn-group-list {
-  margin: 0 -10px -20px; }
+  margin: 0 -10px -20px;
+  overflow: hidden; }
   .btn-group-list > li {
-    display: inline-block;
-    width: 33%;
+    float: left;
+    width: 33.333%;
     padding: 0 10px;
     margin-bottom: 20px;
     text-align: center; }
     .btn-group-list > li:first-child {
-      width: 33%;
       text-align: left; }
     .btn-group-list > li:last-child {
-      width: 33%;
       text-align: right; }
 
 .section-form {
@@ -5778,14 +5777,7 @@ a.banner-link {
     z-index: 10;
     padding-top: 16px;
     padding-bottom: 10px;
-    background-color: #ffffff; }
-
-  .btn-group-list > li {
-    width: 32%; }
-    .btn-group-list > li:last-child {
-      width: 32%; }
-    .btn-group-list > li:first-child {
-      width: 32%; } }
+    background-color: #ffffff; } }
 @media all and (max-width: 860px) {
   .section-page-banner.has-video-btn a.btn-play,
   .section-page-banner.has-video-btn .btn-play {
@@ -6011,17 +6003,7 @@ a.banner-link {
       padding: 0; }
 
   .custom-marker {
-    font-size: 18px; }
-
-  .btn-group-list > li {
-    width: 49%;
-    text-align: left; }
-    .btn-group-list > li:last-child {
-      width: 49%;
-      text-align: left; }
-    .btn-group-list > li:first-child {
-      width: 49%;
-      text-align: left; } }
+    font-size: 18px; } }
 @media all and (max-width: 680px) {
   .new-img-wrap {
     float: none;
@@ -6041,7 +6023,17 @@ a.banner-link {
   .section-class .tab-left-block {
     padding-left: 10px; }
     .section-class .tab-left-block:not(:last-child) {
-      margin-bottom: 40px; } }
+      margin-bottom: 40px; }
+
+  .btn-group-list > li {
+    width: 100%;
+    text-align: center; }
+    .btn-group-list > li:last-child {
+      width: 100%;
+      text-align: center; }
+    .btn-group-list > li:first-child {
+      width: 100%;
+      text-align: center; } }
 @media all and (max-width: 640px) {
   .container {
     padding: 0 10px; }

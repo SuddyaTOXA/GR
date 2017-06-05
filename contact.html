@@ -91,17 +91,18 @@
             <div class="container">
                 <ul class="btn-group-list">
                     <li>
-                        <div class="btn-group">
-                        <span class="drop-down-btn">
-                            <span class="drop-down-label">Sales Inquiries</span>
-                        </span>
-                            <ul class="drop-down-list" id="wine-category">
-                                <li><a href="#maincontent">Find out more</a></li>
-                                <li><a href="#history">History</a></li>
-                                <li><a href="#structure">Structure</a></li>
-                                <li><a href="#board">Board of Directors</a></li>
-                            </ul>
-                        </div>
+                        <!--<div class="btn-group">-->
+                        <!--<span class="drop-down-btn">-->
+                            <!--<span class="drop-down-label">Sales Inquiries</span>-->
+                        <!--</span>-->
+                            <!--<ul class="drop-down-list" id="wine-category">-->
+                                <!--<li><a href="#maincontent">Find out more</a></li>-->
+                                <!--<li><a href="#history">History</a></li>-->
+                                <!--<li><a href="#structure">Structure</a></li>-->
+                                <!--<li><a href="#board">Board of Directors</a></li>-->
+                            <!--</ul>-->
+                        <!--</div>-->
+                        <a href="#s-form" class="btn go-to">Sales Inquiries</a>
                     </li>
                     <li>
                         <a href="#" class="btn">
@@ -117,7 +118,7 @@
             </div>
         </section>
 
-        <section class="section-form">
+        <section class="section-form" id="s-form">
             <div class="container">
                 <div class="form-box">
                     <h2 class="section-title">Sales Inquiry</h2>
@@ -126,13 +127,13 @@
                             <li>
                                 <ul>
                                     <li>
-                                        <span class="input-name">Name</span>
-                                        <input type="text" class="input-style" placeholder="Enter your name">
+                                        <label for="name" class="input-name">Name</label>
+                                        <input type="text" id="name" class="input-style" placeholder="Enter your name">
                                     </li>
                                     <li>
-                                        <span class="input-name">Position</span>
+                                        <label for="position" class="input-name">Position</label>
                                         <span class="select-wrap">
-                                            <select>
+                                            <select id="position" >
                                                 <option value="All_day" selected >Select your position</option>
                                                 <option value="Morning">Morning</option>
                                                 <option value="Afternoon">Afternoon</option>
@@ -145,13 +146,13 @@
                             <li>
                                 <ul>
                                     <li>
-                                        <span class="input-name">Company name</span>
-                                        <input type="text" class="input-style" placeholder="Enter your company name">
+                                        <label for="company-name" class="input-name">Company name</label>
+                                        <input id="company-name" type="text" class="input-style" placeholder="Enter your company name">
                                     </li>
                                     <li>
-                                        <span class="input-name">TYPE OF COMPANY</span>
+                                        <label for="company-type" class="input-name">TYPE OF COMPANY</label>
                                         <span class="select-wrap">
-                                            <select>
+                                            <select id="company-type">
                                                 <option value="All_day" selected >Select type of company</option>
                                                 <option value="Morning">Morning</option>
                                                 <option value="Afternoon">Afternoon</option>
@@ -164,13 +165,13 @@
                             <li>
                                 <ul>
                                     <li>
-                                        <span class="input-name">what are you looking to do / what is your problem?</span>
-                                        <textarea name="text" class="input-style" placeholder="Write your message here"></textarea>
+                                        <label for="problem" class="input-name">what are you looking to do / what is your problem?</label>
+                                        <textarea id="problem" name="text" class="input-style" placeholder="Write your message here"></textarea>
                                     </li>
                                     <li>
-                                        <span class="input-name">area of development / current operational area</span>
+                                        <label for="area" class="input-name">area of development / current operational area</label>
                                         <span class="select-wrap">
-                                            <select>
+                                            <select id="area">
                                                 <option value="All_day" selected >Select area of development / operation area</option>
                                                 <option value="Morning">Morning</option>
                                                 <option value="Afternoon">Afternoon</option>
@@ -197,7 +198,7 @@
                     markerText = 'We are here';
             </script>
             <script async defer
-                    src="https://maps.googleapis.com/maps/api/js?key=AIzaSyAHKt3EYIxhnFcdlmYzVDdWoxBHI819UFY&callback=initMap">
+                    src="https://maps.googleapis.com/maps/api/js?key=AIzaSyAHKt3EYIxhnFcdlmYzVDdWoxBHI819UFY">
             </script>
         </section>
 

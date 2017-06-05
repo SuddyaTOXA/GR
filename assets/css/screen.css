@@ -3128,6 +3128,20 @@ a.btn-download,
   padding: 11px 22px 10px;
   font-size: 1em; }
 
+a.btn.go-to, .btn.go-to {
+  padding-right: 55px; }
+  a.btn.go-to:after, .btn.go-to:after {
+    position: absolute;
+    content: '';
+    top: 50%;
+    margin-top: -4px;
+    right: 21px;
+    width: 0;
+    height: 0;
+    border-left: 7px solid transparent;
+    border-right: 7px solid transparent;
+    border-top: 10px solid #ffffff; }
+
 .input-style {
   display: block;
   width: 100%;
@@ -3236,6 +3250,8 @@ select {
   min-height: 50px;
   width: 100%;
   padding: 12px 50px 12px 16px;
+  color: #abb3ba;
+  font-family: "proximanova-light", Arial, sans-serif;
   -webkit-appearance: none;
   -moz-appearance: none;
   appearance: none;
@@ -3249,6 +3265,11 @@ select {
   border-radius: 0;
   letter-spacing: 0.8px;
   background-color: #FBFBFB; }
+  select option {
+    font-family: "proximanova-light", Arial, sans-serif;
+    color: #656f77; }
+    select option:checked {
+      color: #abb3ba; }
 
 .header {
   overflow: hidden;
@@ -5101,6 +5122,8 @@ a.banner-link {
     min-width: 200px;
     padding: 12px 20px 10px;
     font-size: 17px; }
+  .section-btn-group a.btn.go-to, .section-btn-group .btn.go-to {
+    padding-right: 55px; }
   .section-btn-group .drop-down-btn {
     margin-top: 0;
     font-size: 17px;
@@ -5758,11 +5781,11 @@ a.banner-link {
     background-color: #ffffff; }
 
   .btn-group-list > li {
-    width: 100%; }
+    width: 32%; }
     .btn-group-list > li:last-child {
-      width: 100%; }
+      width: 32%; }
     .btn-group-list > li:first-child {
-      width: 100%; } }
+      width: 32%; } }
 @media all and (max-width: 860px) {
   .section-page-banner.has-video-btn a.btn-play,
   .section-page-banner.has-video-btn .btn-play {
@@ -5988,7 +6011,17 @@ a.banner-link {
       padding: 0; }
 
   .custom-marker {
-    font-size: 18px; } }
+    font-size: 18px; }
+
+  .btn-group-list > li {
+    width: 49%;
+    text-align: left; }
+    .btn-group-list > li:last-child {
+      width: 49%;
+      text-align: left; }
+    .btn-group-list > li:first-child {
+      width: 49%;
+      text-align: left; } }
 @media all and (max-width: 680px) {
   .new-img-wrap {
     float: none;
@@ -6182,7 +6215,17 @@ a.banner-link {
     padding-right: 10px; }
 
   #g-map {
-    height: 400px; } }
+    height: 400px; }
+
+  .btn-group-list > li {
+    width: 100%;
+    text-align: center; }
+    .btn-group-list > li:last-child {
+      width: 100%;
+      text-align: center; }
+    .btn-group-list > li:first-child {
+      width: 100%;
+      text-align: center; } }
 @media all and (max-width: 420px) {
   .new-img-wrap {
     max-width: 100%; }

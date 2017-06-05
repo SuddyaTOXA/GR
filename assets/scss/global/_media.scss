@@ -149,6 +149,17 @@
         padding-bottom: 10px;
         background-color: #ffffff;
     }
+    .btn-group-list {
+        > li {
+            width: 100%;
+            &:last-child {
+                width: 100%;
+            }
+            &:first-child {
+                width: 100%;
+            }
+        }
+    }
 }
 
 @media all and (max-width: 860px) {
@@ -418,17 +429,6 @@
     max-width: calc(100% - 40px);
     top: 20px;
     text-align: center;
-  }
-  .btn-group-list {
-      > li {
-         width: 100%;
-          &:last-child {
-              width: 100%;
-          }
-          &:first-child {
-              width: 100%;
-          }
-      }
   }
     .form-list {
         > li {

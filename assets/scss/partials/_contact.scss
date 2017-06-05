@@ -21,16 +21,16 @@
     }
   }
   .drop-down-list {
+    z-index: 999;
     background-color: rgba(251, 126, 34, 0.9);
   }
 }
 
 .btn-group-list {
-  overflow: hidden;
   margin: 0 -10px -20px;
   > li {
-    float: left;
-    width: 34%;
+    display: inline-block;
+    width: 33%;
     padding: 0 10px;
     margin-bottom: 20px;
     text-align: center;

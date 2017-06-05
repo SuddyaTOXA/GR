@@ -130,7 +130,10 @@ select {
         font-family: $font-light;
         color: #656f77;
         &:disabled {
-            color: #abb3ba;;
+            color: #c1c9d0;
         }
     }
+}
+select option:disabled {
+
 }

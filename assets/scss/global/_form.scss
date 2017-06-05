@@ -132,11 +132,11 @@ select {
     option {
         font-family: $font-light;
         color: #656f77;
-        &:checked {
-            color: #131617;;
-        }
-        &:disabled {
-            color: #c1c9d0;
-        }
+        //&:checked {
+        //    color: #131617;;
+        //}
+        //&:disabled {
+        //    color: #c1c9d0;
+        //}
     }
 }

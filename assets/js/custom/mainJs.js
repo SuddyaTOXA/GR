@@ -310,7 +310,14 @@ jQuery(document).ready(function($) {
     });
 
     $('select').on('change',function(){
-        $(this).css('color', '#131617');
+        var color = $(this).find('option:selected').attr('value');
+        console.log(color);
+        if (color) {
+            $(this).css('color', '#131617');
+        } else {
+            $(this).css('color', '#abb3ba');
+        }
+
     });
 
     /*viewportchecker to trigger animations throughout*/

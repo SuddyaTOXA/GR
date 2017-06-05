@@ -100,6 +100,7 @@ jQuery(document).ready(function($) {
             zoom: 16,
             center: myLatlng,
             disableDefaultUI: true,
+            scrollwheel: false,
             mapTypeControlOptions: {
                 mapTypeIds: ['styled_map']
             }

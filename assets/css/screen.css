@@ -5188,6 +5188,7 @@ a.banner-link {
   width: 100%; }
 
 #custom-marker {
+  display: none;
   position: absolute;
   z-index: 99999999;
   left: 50%;

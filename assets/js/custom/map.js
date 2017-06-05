@@ -9,15 +9,20 @@ jQuery(document).ready(function($) {
         var uluru = {lat: latC, lng: lngC};
         var map = new google.maps.Map(document.getElementById('g-map'), {
             zoom: 16,
-            center: {lat: latC + 0.001, lng: lngC - 0.005},
+            // center: {lat: latC + 0.001, lng: lngC - 0.005},
+            center: {lat: latC, lng: lngC},
             disableDefaultUI: true,
             mapTypeControlOptions: {
                 mapTypeIds: ['styled_map']
             }
         });
+
+        var image = 'img/marker.png';
+
         var marker = new google.maps.Marker({
             position: uluru,
-            map: map
+            map: map,
+            icon: image
         });
 
         //Associate the styled map with the MapTypeId and set it to display.

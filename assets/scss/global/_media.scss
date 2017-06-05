@@ -106,7 +106,11 @@
 }
 
 @media all and (max-width: 991px) {
-
+    .contact-info-list {
+        > li {
+            width: 50%;
+        }
+    }
 }
 
 @media all and (max-width: 960px) {
@@ -199,6 +203,17 @@
             display: inline-block;
             padding-top: 5px;
             padding-bottom: 5px;
+        }
+    }
+    .form-box {
+        padding-left: 20px;
+        padding-right: 20px;
+    }
+    .form-list {
+        margin-left: -10px;
+        margin-right: -10px;
+        > li {
+            padding: 0 10px;
         }
     }
 }
@@ -404,6 +419,31 @@
     top: 20px;
     text-align: center;
   }
+  .btn-group-list {
+      > li {
+         width: 100%;
+          &:last-child {
+              width: 100%;
+          }
+          &:first-child {
+              width: 100%;
+          }
+      }
+  }
+    .form-list {
+        > li {
+            width: 100%;
+            float: none;
+        }
+    }
+    .contact-info-list {
+        margin-left: 0;
+        margin-right: 0;
+        > li {
+            width: 100%;
+            padding: 0;
+        }
+    }
 }
 @media all and (max-width: 680px) {
     .new-img-wrap {
@@ -489,6 +529,16 @@
                 }
             }
         }
+    .form-box {
+        padding-top: 25px;
+        padding-bottom: 30px;
+    }
+    .section-form .section-title {
+        margin-bottom: 20px;
+    }
+    .section-form a.btn, .section-form .btn {
+        margin-top: 0;
+    }
 }
 
 @media all and (max-width: 600px) {
@@ -616,6 +666,13 @@
         margin-right: 0;
         margin-bottom: 10px;
     }
+    .form-box {
+        padding-left: 10px;
+        padding-right: 10px;
+    }
+    #g-map {
+        height: 400px;
+    }
 }
 
 @media all and (max-width: 420px) {
@@ -635,7 +692,20 @@
 }
 
 @media all and (max-width: 380px) {
-
+    .btn-group-list {
+        > li {
+            width: 100%;
+            text-align: center;
+            &:last-child {
+                width: 100%;
+                text-align: center;
+            }
+            &:first-child {
+                width: 100%;
+                text-align: center;
+            }
+        }
+    }
 }
 
 @media all and (max-width: 360px) {

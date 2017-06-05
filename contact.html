@@ -181,7 +181,9 @@
                                 </ul>
                             </li>
                         </ul>
-                        <input type="submit" value="Send Message" class="btn">
+                        <div class="form-btn-box">
+                            <input type="submit" value="Send Message" class="btn">
+                        </div>
                     </form>
                 </div>
             </div>
@@ -189,6 +191,14 @@
 
         <section class="section-g-map">
             <div id="g-map"></div>
+            <span id="custom-marker">We are here</span>
+            <script>
+                var latC = 38.5739561,
+                    lngC = -121.4823476;
+            </script>
+            <script async defer
+                    src="https://maps.googleapis.com/maps/api/js?key=AIzaSyAHKt3EYIxhnFcdlmYzVDdWoxBHI819UFY&callback=initMap">
+            </script>
         </section>
 
         <section class="section-contact-info">
@@ -196,37 +206,37 @@
                 <ul class="contact-info-list">
                     <li>
                         <div class="contact-info-img-wrap">
-                            <img src="" alt="">
+                            <img src="img/phone%20icon.png" alt="">
                         </div>
                         <div class="contact-info-desc">
                             <h4 class="contact-info-title">Call us</h4>
                             <div class="content">
-                                Phone: 1-916-504-5222
-                                Sales (ext. 1)  |  Customer service (ext. 2)
+                                <p>Phone: <a href="tel:1-916-504-5222">1-916-504-5222</a></p>
+                                <p>Sales (ext. 1)  |  Customer service (ext. 2)</p>
                             </div>
                         </div>
                     </li>
                     <li>
                         <div class="contact-info-img-wrap">
-                            <img src="" alt="">
+                            <img src="img/envelope%20icon.png" alt="">
                         </div>
                         <div class="contact-info-desc">
                             <h4 class="contact-info-title">Email</h4>
                             <div class="content">
-                                info@greyrock.com
-                                www.greyrock.com
+                                <p><a href="mailto:info@greyrock.com">info@greyrock.com</a></p>
+                                <p><a href="www.greyrock.com">www.greyrock.com</a></p>
                             </div>
                         </div>
                     </li>
                     <li>
                         <div class="contact-info-img-wrap">
-                            <img src="" alt="">
+                            <img src="img/location%20icon.png" alt="">
                         </div>
                         <div class="contact-info-desc">
                             <h4 class="contact-info-title">Visit Us</h4>
                             <div class="content">
-                                2020 L Street, Suite 120
-                                Sacramento, California 95811
+                                <p>2020 L Street, Suite 120</p>
+                                <p>Sacramento, California 95811</p>
                             </div>
                         </div>
                     </li>
@@ -263,6 +273,7 @@
     <script src="assets/js/jquery.viewportchecker.min.js"></script>
     <script src="assets/js/smooth-scroll.min.js"></script>
     <script src="assets/js/magnifi.js"></script>
+    <script src="assets/js/custom/map.js"></script>
     <script src="assets/js/custom/mainJs.js"></script>
 
 </body>

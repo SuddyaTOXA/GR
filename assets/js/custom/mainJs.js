@@ -309,6 +309,9 @@ jQuery(document).ready(function($) {
         }, 250);
     });
 
+    $('select').on('change',function(){
+        $(this).css('color', '#131617');
+    });
 
     /*viewportchecker to trigger animations throughout*/
     $(".news-box").addClass("invisible").viewportChecker({

@@ -3265,9 +3265,14 @@ select {
   border-radius: 0;
   letter-spacing: 0.8px;
   background-color: #FBFBFB; }
+  select::selection {
+    background: #ffb7b7;
+    /* WebKit/Blink Browsers */ }
   select option {
     font-family: "proximanova-light", Arial, sans-serif;
     color: #656f77; }
+    select option:checked {
+      color: #131617; }
     select option:disabled {
       color: #c1c9d0; }
 

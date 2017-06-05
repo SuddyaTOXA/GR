@@ -126,14 +126,17 @@ select {
     &:hover {
       //  border-bottom: 2px solid $bg-color-blue;
     }
+    &::selection {
+        background: #ffb7b7; /* WebKit/Blink Browsers */
+    }
     option {
         font-family: $font-light;
         color: #656f77;
+        &:checked {
+            color: #131617;;
+        }
         &:disabled {
             color: #c1c9d0;
         }
     }
-}
-select option:disabled {
-
 }

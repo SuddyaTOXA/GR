@@ -5187,18 +5187,15 @@ a.banner-link {
   height: 450px;
   width: 100%; }
 
-#custom-marker {
-  display: none;
+.custom-marker {
   position: absolute;
   z-index: 99999999;
-  left: 50%;
-  top: 50%;
-  margin-left: -111px;
-  max-width: 217px;
+  margin-left: -109px;
+  max-width: 218px;
   width: 100%;
   padding: 10px 20px 13px;
   font-family: "proximanova-semibold", Arial, sans-serif;
-  font-size: 1.5em;
+  font-size: 24px;
   text-align: center;
   color: #fff;
   background-color: #35393C;
@@ -5208,7 +5205,7 @@ a.banner-link {
   -ms-border-radius: 3px;
   -o-border-radius: 3px;
   border-radius: 3px; }
-  #custom-marker:after {
+  .custom-marker:after {
     position: absolute;
     content: '';
     bottom: -10px;
@@ -5988,7 +5985,10 @@ a.banner-link {
     margin-right: 0; }
     .contact-info-list > li {
       width: 100%;
-      padding: 0; } }
+      padding: 0; }
+
+  .custom-marker {
+    font-size: 18px; } }
 @media all and (max-width: 680px) {
   .new-img-wrap {
     float: none;

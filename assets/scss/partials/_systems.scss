@@ -127,10 +127,15 @@
           margin-bottom: 0;
         }
       }
-      a {
+      > p,
+      > ul,
+      > ol {
+        margin-bottom: 10px;
+      }
+      a:not(.btn) {
         color: #fb7e22;
         &:hover {
-          text-decoration: none;
+          text-decoration: underline;
         }
       }
       ul > li {
@@ -144,6 +149,9 @@
       }
       li, blockquote {
         text-align: left;
+      }
+      blockquote {
+        margin-bottom: 1em;
       }
       img {
         max-width: 100%;
@@ -309,7 +317,7 @@
 .section-class {
   position: relative;
   padding-top: 33px;
-  padding-bottom: 140px;
+  padding-bottom: 120px;
   background: url(../../img/class_r_bg.png) right bottom no-repeat;
   background-size: contain;
   &:before {

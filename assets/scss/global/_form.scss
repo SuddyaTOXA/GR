@@ -77,7 +77,8 @@ textarea:-moz-placeholder {
 
 
 
-.select-wrap {
+.select-wrap,
+.select .wpcf7-form-control-wrap {
     position:relative;
     display: inline-block;
     max-width: 100%;

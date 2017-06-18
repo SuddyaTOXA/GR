@@ -15,9 +15,16 @@ function setMaxOuterHeight(box) {
             maxHeight = jQuery(this).outerHeight();
         }
     });
-
 }
 
+function newsMasonry() {
+    if ( jQuery('.ctf-tweets').length ) {
+
+        jQuery('.ctf-tweets').masonry({
+            itemSelector: '.ctf-item'
+        });
+    }
+}
 
 var boxTitle = jQuery('.watch-title-wrap');
 setMaxHeight(boxTitle);
@@ -25,17 +32,17 @@ setMaxHeight(boxTitle);
 
 jQuery(document).ready(function($) {
 
-	// header fade
-	$(function() {
-	    var header = $('#header');
-	    setTimeout(function(){
-	        header.addClass('show');
+    // header fade
+    $(function() {
+        var header = $('#header');
+        setTimeout(function(){
+            header.addClass('show');
         },800);
-	});
+    });
 
-	//header background on scroll
-	var header = $('#header');
-	$(window).on('scroll', function() {
+    //header background on scroll
+    var header = $('#header');
+    $(window).on('scroll', function() {
         var st2 = $(this).scrollTop();
 
         if (st2 > 0) {
@@ -43,7 +50,7 @@ jQuery(document).ready(function($) {
         } else {
             header.removeClass('scrolling');
         }
-	});
+    });
     $(window).on('load resize', function() {
         var fuelBox = $('.fuel-product-desc-box'),
             box = fuelBox.parent();
@@ -134,6 +141,25 @@ jQuery(document).ready(function($) {
         }
     });
 
+
+    // for Contact buttons
+    $('.btn-group-list a.go-to').on('click', function () {
+        var href    = $(this).attr('href'),
+            id      = href.substring(href.indexOf('#')+1),
+            section = $('.section-form');
+
+        section.addClass('open');
+        section.find('.form-box').each(function() {
+            console.log(id);
+            if ($(this).data('id') == id) {
+                $(this).fadeIn(500);
+            } else {
+                $(this).fadeOut(500);
+            }
+        });
+    });
+
+
     // for modal
     if ( $('a.popup-vimeo').length ) {
         $('.popup-vimeo').magnificPopup({
@@ -169,7 +195,12 @@ jQuery(document).ready(function($) {
 
                 slideList.each(function (index) {
                     if ($(this).hasClass('swiper-slide-active')) {
-                        var color = $(this).data('slideColor');
+                        var color = $(this).data('slideColor'),
+                            video = $('.gallery-top video')[index],
+                            speed = $('.gallery-top video').eq(index).data('speed');
+
+                        if (speed)
+                            video.playbackRate = speed;
 
                         if (color == '#ffffff') {
                             header.addClass('white-header');
@@ -187,11 +218,17 @@ jQuery(document).ready(function($) {
 
                 slideList.each(function (index) {
                     if ($(this).hasClass('swiper-slide-active')) {
-                        var color = $(this).data('slideColor');
+                        var color = $(this).data('slideColor'),
+                            video = $('.gallery-top video')[index],
+                            speed = $('.gallery-top video').eq(index).data('speed');
 
-                        var video = $('video')[index];
                         enableInlineVideo(video);
-                        setTimeout(function () { video.play(); }, 200);
+                        setTimeout(function () {
+                            video.play();
+
+                            if (speed)
+                                video.playbackRate = speed;
+                        }, 200);
 
                         console.log(index + " - PLAY");
                         console.log('------------------');
@@ -213,7 +250,9 @@ jQuery(document).ready(function($) {
             slidesPerView: 'auto',
             autoplay: 8000,
             centeredSlides: true,
+
             paginationClickable: true,
+
             loop: true,
             spaceBetween: 30,
             noSwiping: false
@@ -268,6 +307,25 @@ jQuery(document).ready(function($) {
         event.preventDefault();
     });
 
+
+    // for Twitter Feed section
+    setTimeout(newsMasonry(), 10);
+    $('#ctf-more').click(function(){
+        var postInit = $('.ctf-tweets > .ctf-item').length,
+            interval = setInterval(function(){
+                var allPost = $('.ctf-tweets > .ctf-item').length,
+                    postButton = $('#ctf-more').is(":hidden");
+
+                if (allPost > postInit) {
+                    $('.ctf-tweets').masonry('reloadItems').masonry('layout');
+                    clearInterval(interval);
+                } else if (postButton) {
+                    clearInterval(interval);
+                }
+            }, 200);
+    });
+
+
     //for watch video section
     var firstCall = true;
     $('.btn-only-play').on('click', function () {
@@ -295,6 +353,10 @@ jQuery(document).ready(function($) {
         setTimeout(function () {
             if (video.paused) {
                 video.play();
+
+                var speed = videoTag.data('speed');
+                if (speed) video.playbackRate = speed;
+
                 $this.addClass('pause');
             } else {
                 video.pause();
@@ -360,6 +422,5 @@ jQuery(document).ready(function($) {
 
 
     /*end viewportchecker*/
-
 
 });

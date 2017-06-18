@@ -27,9 +27,11 @@
         }
     }
     a:hover,
-    .white-header & a:hover,
+    .white-header:not(.scrolling) & a:hover,
     .current-menu-item:not(.btn-ellipse) > a,
-    .current_page_item:not(.btn-ellipse) > a {
+    .current_page_item:not(.btn-ellipse) > a,
+    .current-post-parent:not(.btn-ellipse) > a,
+    .cat_news & .menu-item-178 > a {
         color: #fb7e22;
         text-decoration: none;
     }

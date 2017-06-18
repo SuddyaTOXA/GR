@@ -1,4 +1,5 @@
-a.btn, .btn {
+a.btn, .btn,
+#ctf #ctf-more {
     position: relative;
     display: inline-block;
     max-width: 100%;
@@ -21,10 +22,9 @@ a.btn, .btn {
             background-color: rgba(13, 141, 222, 0.8);
         }
     }
-}
-a.btn:hover,
-.btn:hover {
-    background-color: rgba(251, 126, 34, 0.8);
+    &:hover {
+        background-color: rgba(251, 126, 34, 0.8);
+    }
 }
     a.btn-play,
     .btn-play {

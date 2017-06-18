@@ -49,6 +49,7 @@
           display: block;
           width: 198px;
           height: 198px;
+          line-height: 198px;
           margin: 0 auto 16px;
           //border: 1px solid #F1F1F1;
           @include border-radius(50%);
@@ -56,6 +57,7 @@
           img {
             max-width: 100%;
             max-height: 100%;
+            vertical-align: middle;
           }
         }
         .runs-desc-box {
@@ -152,6 +154,23 @@
 
   .section-title {
     margin-bottom: 44px;
+    color: #40464b;
+    @media all and (min-width: 768px) {
+      display: none;
+    }
+  }
+
+  .comparison-titles {
+    @media all and (max-width: 767px) {
+      display: none;
+    }
+    .section-title {
+      display: block;
+    }
+    .complex-wrap,
+    .simple-wrap {
+      vertical-align: top;
+    }
   }
 
   .complex-wrap,

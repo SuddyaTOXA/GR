@@ -410,7 +410,7 @@
 }
 @media all and (max-width: 767px) {
     .news-list > li {
-        width: 49%;
+        width: 49.5%;
     }
   .section-map-description {
     display: block;
@@ -464,13 +464,9 @@
     }
     .btn-group-list {
         > li {
-            width: 100%;
-            text-align: center;
-            &:last-child {
-                width: 100%;
-                text-align: center;
-            }
-            &:first-child {
+            &,
+            &:nth-child(3n+1),
+            &:nth-child(3n) {
                 width: 100%;
                 text-align: center;
             }

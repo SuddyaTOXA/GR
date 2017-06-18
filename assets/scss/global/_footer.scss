@@ -40,7 +40,8 @@
             }
             & a:hover,
             &.current-menu-item > a,
-            &.current_page_item > a {
+            &.current_page_item > a,
+            &.current-post-parent > a {
                 color: #40464b;
                 text-decoration: none;
             }

@@ -386,7 +386,7 @@ filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#ffba00', end
     max-width: 1400px;
   }
   .section-title {
-    margin-bottom: 71px;
+    margin-bottom: 69px;
   }
 }
   .news-box {
@@ -399,7 +399,7 @@ filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#ffba00', end
   }
     .new-img-wrap {
       float: left;
-      max-width: 278px;
+      max-width: 280px;
       img {
         display: block;
         max-width: 100%;
@@ -409,6 +409,9 @@ filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#ffba00', end
     .news-desc {
       overflow: hidden;
       padding: 27px 20px 30px 30px;
+      a:hover {
+        text-decoration: none;
+      }
     }
     .latest-news-title {
       margin-bottom: 17px;
@@ -417,6 +420,10 @@ filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#ffba00', end
       font-weight: 400;
       letter-spacing: -0.15px;
       color: #40464b;
+      @include transition($link-transition);
+      a:hover & {
+        color: #fb7e22;
+      }
     }
     .news-date {
       float: right;
@@ -429,6 +436,15 @@ filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#ffba00', end
     .news-content {
       font-family: 'proximanova-light', Arial, sans-serif;
       color: #737c84;
+      @media all and (min-width: 681px) {
+        max-height: 100px;
+        overflow: hidden;
+      }
+      .news-box > a + .news-desc & {
+        @media all and (min-width: 681px) {
+          max-height: 60px;
+        }
+      }
       > * {
         margin-bottom: 16px;
         &:last-child {

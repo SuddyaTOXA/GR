@@ -34,6 +34,14 @@
     top:0;
     height: 100%;
     width: 100%;
+    .mapboxgl-ctrl-group {
+      .mapboxgl-ctrl-compass {
+        display: none;
+      }
+      .mapboxgl-ctrl-zoom-out:not(:last-child) {
+        border-bottom: 0;
+      }
+    }
   }
     .marker-custom {
       z-index: 100;
@@ -112,13 +120,13 @@
   .marker {
     width: 22px;
     height: 22px;
-    background-image: url(../../img/marker.png) !important;
+    background-image: url(../../img/marker_mapbox.png) !important;
     background-position: center;
     background-repeat: no-repeat;
     background-size: contain;
     cursor: pointer;
     @include transition(background 0.35s);
     &:hover {
-      background-image: url(../../img/marker_h.png) !important;
+      background-image: url(../../img/marker_mapbox_h.png) !important;
     }
   }

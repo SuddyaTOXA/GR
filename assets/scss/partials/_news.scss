@@ -13,7 +13,7 @@
   }
     .news-item-box {
       margin: 0 auto;
-      max-width: 279px;
+      max-width: 280px;
       width: 100%;
       border: 1px solid #F1F1F1;
       @include css3-prefix('box-shadow', '0 0 30px rgba(0, 0, 0, 0.1)');
@@ -24,7 +24,7 @@
         top: -1px;
         left: -1px;
         width: calc(100% + 2px);
-        max-height: 179px;
+        max-height: 180px;
         img {
           max-width: 100%;
           height: auto;
@@ -75,10 +75,12 @@
     color: #40464b;
     font-size: 1.125em;
     font-weight: 400;
-    .pages {
+    .pages,
+    .first,
+    .last {
       display: none;
     }
-    .curren {
+    .current {
       color: #000;
     }
     > * {
@@ -110,4 +112,245 @@
   .social-feed-img {
     max-width: 100%;
     margin: 45px auto 10px;
+  }
+
+  #ctf {
+    margin: 58px auto 10px;
+    max-width: 1100px;
+    .ctf-item {
+      width: 33.33%;
+      width: -webkit-calc(33.33% - 20px);
+      width: -moz-calc(33.33% - 20px);
+      width: calc(33.33% - 20px);
+      @media all and (max-width: 860px) {
+        width: 50%;
+        width: -webkit-calc(50% - 20px);
+        width: -moz-calc(50% - 20px);
+        width: calc(50% - 20px);
+      }
+      @media all and (max-width: 640px) {
+        width: 100%;
+        width: -webkit-calc(100% - 20px);
+        width: -moz-calc(100% - 20px);
+        width: calc(100% - 20px);
+      }
+      padding: 10px;
+      margin: 0 10px 20px;
+      text-align: left;
+      background-color: #ffffff;
+      border: 1px solid #dfe4e4;
+      @include css3-prefix('border-radius', '3px');
+      @include css3-prefix('box-shadow', '0 2px 3px -2px rgba(37, 40, 40, 0.3)');
+      &:first-child {
+        border-top: 1px solid #dfe4e4;
+      }
+    }
+    .ctf-author-avatar {
+      @include css3-prefix('border-radius', '3px');
+    }
+    .ctf-author-name {
+      display: block;
+      font-size: 16px;
+      color: #3a3e42 !important;
+    }
+    .ctf-tweet-date {
+      font-size: 14px;
+      color: #8899a6 !important;
+    }
+    .ctf-author-screenname,
+    &.ctf-styles .ctf-author-screenname {
+      font-size: 15px;
+      color: #a0a7ae;
+    }
+    .ctf-tweet-content {
+      margin-left: 0;
+      margin-top: 12px;
+      margin-bottom: 6px;
+      color: #495359;
+      font-size: 14px;
+      clear: both;
+    }
+    .ctf-tweet-actions {
+      margin-left: 0;
+      float: right;
+      > a {
+        padding-right: 5px;
+        &.ctf-reply {
+          padding-right: 8px;
+        }
+        &:last-child {
+          padding-right: 0;
+        }
+      }
+    }
+    .ctf-author-name,
+    .ctf-tweet-actions,
+    .ctf-author-screenname,
+    .ctf-tweet-meta {
+      &:hover,
+      a:hover,
+      .section-social-feed & a:hover {
+        color: #fb7e22 !important;
+        text-decoration: none;
+      }
+    }
+    #ctf-more {
+      width: 98%;
+      width: -webkit-calc(100% - 20px);
+      width: -moz-calc(100% - 20px);
+      width: calc(100% - 20px);
+      &:hover {
+        background-color: #fb974d;
+        background-color: rgba(251, 126, 34, 0.8) !important;
+      }
+    }
+  }
+
+  .article-content {
+    .container {
+      max-width: 1000px;
+    }
+  }
+  .news-back-link {
+    margin-top: 50px;
+    a {
+      font-size: 1.15em;
+      &:hover {
+        color: #40464b;
+        text-decoration: none;
+      }
+      .fa-angle-left {
+        font-size: 1.1em;
+        margin-right: 4px;
+      }
+    }
+  }
+  .btn-press-release,
+  a.btn-press-release {
+    margin-top: 20px;
+    font-size: 17px;
+    .fa-file-pdf-o {
+      margin-right: 10px;
+    }
+  }
+
+  .gallery {
+    overflow: hidden;
+    margin: 25px 0 12px;
+    .gallery-item {
+      float: left;
+      width: 20%;
+      margin: 0 0 13px;
+      padding: 0 10px;
+      text-align: center;
+      &:nth-child(5n+1) {
+        @media all and (min-width: 769px) {
+          clear: both;
+        }
+      }
+    }
+    &.gallery-columns {
+      &-1 {
+        .gallery-item {
+          width: 100%;
+          clear: both;
+        }
+      }
+      &-2 {
+        .gallery-item {
+          width: 50%;
+          &:nth-child(2n+1) {
+            @media all and (min-width: 421px) {
+              clear: both;
+            }
+          }
+          &:nth-child(5n+1) {
+            @media all and (min-width: 769px) {
+              clear: none;
+            }
+          }
+        }
+      }
+      &-3 {
+        .gallery-item {
+          width: 33.33%;
+          &:nth-child(3n+1) {
+            @media all and (min-width: 641px) {
+              clear: both;
+            }
+          }
+          &:nth-child(5n+1) {
+            @media all and (min-width: 769px) {
+              clear: none;
+            }
+          }
+        }
+      }
+      &-4 {
+        .gallery-item {
+          width: 25%;
+          &:nth-child(4n+1) {
+            @media all and (min-width: 769px) {
+              clear: both;
+            }
+          }
+          &:nth-child(5n+1) {
+            @media all and (min-width: 769px) {
+              clear: none;
+            }
+          }
+        }
+      }
+      &-5 {
+        .gallery-item {
+          width: 20%;
+          &:nth-child(5n+1) {
+            @media all and (min-width: 769px) {
+              clear: both;
+            }
+          }
+        }
+      }
+    }
+    @media all and (max-width: 768px) {
+      &,
+      &.gallery-columns-4,
+      &.gallery-columns-5 {
+        .gallery-item {
+          width: 33.33%;
+          &:nth-child(3n+1) {
+            clear: both;
+          }
+        }
+      }
+    }
+    @media all and (max-width: 640px) {
+      &,
+      &.gallery-columns-3,
+      &.gallery-columns-4,
+      &.gallery-columns-5 {
+        .gallery-item {
+          width: 50%;
+          &:nth-child(2n+1) {
+            clear: both;
+          }
+        }
+      }
+    }
+    @media all and (max-width: 420px) {
+      &,
+      &.gallery-columns-2,
+      &.gallery-columns-3,
+      &.gallery-columns-4,
+      &.gallery-columns-5 {
+        .gallery-item {
+          width: 100%;
+          clear: both;
+        }
+      }
+    }
+    & + blockquote {
+      max-width: 560px;
+      margin: -15px auto 20px;
+    }
   }

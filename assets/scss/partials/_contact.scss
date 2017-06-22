@@ -6,7 +6,7 @@
     //max-width: 1080px;
   }
   a.btn, .btn {
-    min-width: 200px;
+    min-width: 212px;
     padding: 12px 20px 10px;
     font-size: 17px;
   }
@@ -75,17 +75,27 @@
       overflow: hidden;
       margin: 0 -23px;
       > li {
-        float: left;
-        width: 50%;
         padding: 0 23px;
-        &:last-child {
-          width: 100%;
-        }
+        margin-bottom: 31px;
         > ul {
-          > li {
+          > li:not(:last-child) {
             margin-bottom: 31px;
           }
         }
+      }
+      &,
+      .half-box {
+        overflow: hidden;
+        margin: 0 -23px;
+        .half-li {
+          float: left;
+          width: 50%;
+          padding: 0 23px;
+          margin-bottom: 31px;
+        }
+      }
+      li .half-box {
+        margin-bottom: -31px;
       }
     }
       .input-name {

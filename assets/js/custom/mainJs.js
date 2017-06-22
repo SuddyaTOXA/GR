@@ -67,6 +67,28 @@ jQuery(document).ready(function($) {
             box.css('height', '');
         }
     });
+
+    // for image box on Homepage
+    var image_box_func = function(){
+        var box = $('.news-slider .news-box'),
+            imgBox = box.find('.new-img-wrap');
+
+        if ($(window).width() > 680) {
+            var maxHeight = 0;
+            box.each(function () {
+                if ($(this).find('.news-desc').outerHeight() > maxHeight) {
+                    maxHeight = $(this).find('.news-desc').outerHeight();
+                }
+            });
+            imgBox.height(maxHeight);
+        } else {
+            imgBox.css('height', '');
+        }
+    };
+    $(window).on('load resize', function() {
+        image_box_func();
+    });
+
     // for smooth scroll
     smoothScroll.init({
         selector: '.smooth-scroll, a', // Selector for links (must be a class, ID, data attribute, or element tag)
@@ -255,7 +277,10 @@ jQuery(document).ready(function($) {
 
             loop: true,
             spaceBetween: 30,
-            noSwiping: false
+            noSwiping: false,
+            onInit: function (swiper) {
+                image_box_func();
+            }
         });
     }
 

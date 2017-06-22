@@ -212,8 +212,14 @@
     .form-list {
         margin-left: -10px;
         margin-right: -10px;
-        > li {
+        > li,
+        .half-li,
+        .half-box .half-li {
             padding: 0 10px;
+        }
+        .half-box {
+            margin-left: -10px;
+            margin-right: -10px;
         }
     }
 }
@@ -420,7 +426,9 @@
     text-align: center;
   }
     .form-list {
-        > li {
+        > li,
+        .half-li,
+        .half-box .half-li {
             width: 100%;
             float: none;
         }
@@ -441,6 +449,8 @@
     .new-img-wrap {
         float: none;
         margin: 0 auto;
+        width: 100%;
+        min-height: 250px;
     }
     .banner-wrap {
         padding-right: 0;
@@ -540,6 +550,10 @@
     }
     .section-form a.btn, .section-form .btn {
         margin-top: 0;
+    }
+
+    .single .banner-page-title {
+        font-size: 2.25em;
     }
 }
 

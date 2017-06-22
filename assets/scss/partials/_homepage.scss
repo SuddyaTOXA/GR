@@ -398,12 +398,23 @@ filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#ffba00', end
     background-color: #fff;
   }
     .new-img-wrap {
+      position: relative;
       float: left;
-      max-width: 280px;
+      width: 280px;
+      height: 100%;
+      min-height: 203px;
+      @include bg();
       img {
         display: block;
-        max-width: 100%;
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        min-width: 100%;
+        min-height: 100%;
         height: auto;
+        width: auto;
+        opacity: 0;
+        @include transform('translate(-50%, -50%)');
       }
     }
     .news-desc {

@@ -170,6 +170,8 @@ jQuery(document).ready(function($) {
             id      = href.substring(href.indexOf('#')+1),
             section = $('.section-form');
 
+        $('.btn-group-list a').removeClass('active');
+        $(this).addClass('active');
         section.addClass('open');
         section.find('.form-box').each(function() {
             console.log(id);
